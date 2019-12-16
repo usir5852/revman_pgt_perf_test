@@ -2,8 +2,10 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    some-label: some-label-value
+    jmeter-label: jmeter-master
+    jenkins-label: jenkins-slave
 spec:
+  serviceAccountName: jenkins-release
   containers:
     - name: maven
       image: maven:alpine
@@ -19,26 +21,26 @@ spec:
         - cat
       tty: true
       volumeMounts:
-        - mountPath: /root/.kube
-          name: kube-volume
+        #        - mountPath: /root/.kube
+        #          name: kube-volume
         - mountPath: /root/.helm
           name: helm-volume
   volumes:
-    - name: kube-volume
-      hostPath:
-        # directory location on host
-        path: /Users/asankav/.kube
-        # this field is optional
-        type: Directory
-    - name: helm-volume
-      hostPath:
-        # directory location on host
-        path: /Users/asankav/.helm
-        # this field is optional
-        type: Directory
+    #    - name: kube-volume
+    #      hostPath:
+    #            # directory location on host
+    #            path: /Users/asankav/.kube
+    #            # this field is optional
+    #            type: Directory
+    #    - name: helm-volume
+    #      hostPath:
+    #            # directory location on host
+    #            path: /Users/asankav/.helm
+    #            # this field is optional
+    #            type: Directory
     - name: m2-volume
-      hostPath:
-        # directory location on host
-        path: /Users/asankav/.m2
-        # this field is optional
-        type: Directory
+      persistentVolumeClaim:
+        claimName: maven-pv-claim
+    - name: helm-volume
+      persistentVolumeClaim:
+        claimName: helm-pv-claim
