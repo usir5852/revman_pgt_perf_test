@@ -1,13 +1,8 @@
 
 pipeline {
     agent {
-//            docker {
-//                   image 'gvasanka/cidockerimage'
-//                   args '-v /Users/asankav/.m2:/root/.m2 -v /Users/asankav/.kube:/root/.kube -v /Users/asankav/.helm:/root/.helm'
-//             }
             kubernetes {
                   yamlFile 'build-pod.yaml'  // path to the pod definition relative to the root of our project
-//                   defaultContainer 'maven'  // define a default container if more than a few stages use it, will default to jnlp container
              }
     }
 
@@ -45,7 +40,7 @@ pipeline {
                         }
                     }
              }
-             stage('Execute Performance Test') {
+            stage('Execute Performance Test') {
                 steps {
                     container('maven'){
                         sh 'echo ===============Start maven build execution======================='
@@ -54,14 +49,6 @@ pipeline {
                         sh 'echo ===============Finishing maven build execution======================='
                     }
                 }
-//                 post{
-//                      always{
-//                             dir("target/jmeter/results/"){
-//                                  sh 'pwd'
-//                                  perfReport 'httpCounterDocker.csv'
-//                                 }
-//                             }
-//                       }
             }
             stage('Read Performance Test Results') {
                 steps {
