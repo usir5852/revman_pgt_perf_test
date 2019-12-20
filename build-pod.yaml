@@ -29,10 +29,10 @@ spec:
       tty: true
       resources:
         requests:
-          memory: "512Mi"
+          memory: "256Mi"
           cpu: "100m"
         limits:
-          memory: "256Mi"
+          memory: "512Mi"
           cpu: "200m"
       volumeMounts:
         - mountPath: /root/.helm
