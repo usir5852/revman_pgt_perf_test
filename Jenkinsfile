@@ -22,6 +22,7 @@ pipeline {
 //                               sh 'helm init --client-only'
 //                               sh 'helm repo update'
                               sh 'helm install --wait stable/distributed-jmeter --name distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} --set server.replicaCount=${noOfSlaveNodes},master.replicaCount=0'
+                              sh 'kubectl wait --for=condition=ready pods -l app.kubernetes.io/instance=distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} --timeout=90s'
                               sh 'echo =======================Finishing deploy JMeter Slaves==============='
                         }
                     }
@@ -62,7 +63,7 @@ pipeline {
                             container('kubehelm'){
                                  sh 'echo ==============Start Erasing JMeter Slaves========================'
                                  sh 'helm delete --purge distributed-jmeter-${JOBNAME}-${BUILD_NUMBER}'
-                                 sh 'kubectl wait --for=delete pods -l app.kubernetes.io/instance=distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} --timeout=60s'
+                                 sh 'kubectl wait --for=delete pods -l app.kubernetes.io/instance=distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} --timeout=90s'
                                  sh 'echo ===============Finishing Erasing JMeter Slaves======================='
                             }
                       }
@@ -74,7 +75,7 @@ pipeline {
                 sh 'echo ==============Start post failure clearing =============='
                 container('kubehelm'){
                     sh 'helm delete --purge distributed-jmeter-${JOBNAME}-${BUILD_NUMBER}'
-                    sh 'kubectl wait --for=delete pods -l app.kubernetes.io/instance=distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} --timeout=60s'
+                    sh 'kubectl wait --for=delete pods -l app.kubernetes.io/instance=distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} --timeout=90s'
                 }
                 sh 'echo ==============Finishing post failure clearing=============='
             }
