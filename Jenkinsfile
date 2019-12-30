@@ -21,8 +21,7 @@ pipeline {
                               sh 'echo =======================Start deploy JMeter Slaves==============='
 //                               sh 'helm init --client-only'
 //                               sh 'helm repo update'
-                              sh 'helm install stable/distributed-jmeter --name distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} --set server.replicaCount=${noOfSlaveNodes},master.replicaCount=0'
-                              sh 'sleep 5'
+                              sh 'helm install --wait stable/distributed-jmeter --name distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} --set server.replicaCount=${noOfSlaveNodes},master.replicaCount=0'
                               sh 'echo =======================Finishing deploy JMeter Slaves==============='
                         }
                     }
@@ -63,7 +62,7 @@ pipeline {
                             container('kubehelm'){
                                  sh 'echo ==============Start Erasing JMeter Slaves========================'
                                  sh 'helm delete --purge distributed-jmeter-${JOBNAME}-${BUILD_NUMBER}'
-                                 sh 'sleep 5'
+                                 sh 'kubectl wait --for=delete pods -l app.kubernetes.io/instance=distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} --timeout=60s'
                                  sh 'echo ===============Finishing Erasing JMeter Slaves======================='
                             }
                       }
@@ -71,8 +70,13 @@ pipeline {
     }
 
     post {
-            always {
-                echo '==============I will always say Hello again!=============='
+            failure {
+                sh 'echo ==============Start post failure clearing =============='
+                container('kubehelm'){
+                    sh 'helm delete --purge distributed-jmeter-${JOBNAME}-${BUILD_NUMBER}'
+                    sh 'kubectl wait --for=delete pods -l app.kubernetes.io/instance=distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} --timeout=60s'
+                }
+                sh 'echo ==============Finishing post failure clearing=============='
             }
     }
 }
