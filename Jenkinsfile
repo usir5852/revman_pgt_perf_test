@@ -2,7 +2,7 @@
 pipeline {
     agent {
             kubernetes {
-                  yamlFile 'build-pod.yaml'  // path to the pod definition relative to the root of our project
+                  yamlFile 'Jenkins-Slave-Pod.yaml'  // path to the pod definition relative to the root of our project
              }
     }
 
