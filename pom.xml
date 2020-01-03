@@ -42,6 +42,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
+                    <jmeterVersion>5.1.1</jmeterVersion>
                     <jMeterProcessJVMSettings>
                         <xms>${xms.setting}</xms>
                         <xmx>${xmx.setting}</xmx>
