@@ -39,7 +39,18 @@ pipeline {
                             }
                         }
                     }
-             }
+            }
+            stage('Copying data files to JMeter Slaves') {
+                steps {
+                    container('kubehelm'){
+                        sh 'echo ===============Start copying data files======================='
+                        sh 'pwd'
+                        sh 'for pod in $(kubectl get pod -l app.kubernetes.io/instance=distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} -o custom-columns=:metadata.name); do kubectl cp src/test/data/ $pod:/opt/perf-test-data;done;'
+                        sh 'sleep 10m'
+                        sh 'echo ===============Finishing copying data files======================='
+                    }
+                }
+            }
             stage('Execute Performance Test') {
                 steps {
                     container('maven'){
@@ -71,7 +82,7 @@ pipeline {
     }
 
     post {
-            failure {
+            unsuccessful {
                 sh 'echo ==============Start post failure clearing =============='
                 container('kubehelm'){
                     sh 'helm delete --purge distributed-jmeter-${JOBNAME}-${BUILD_NUMBER}'
