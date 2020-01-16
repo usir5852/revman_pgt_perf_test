@@ -21,7 +21,7 @@ pipeline {
                               sh 'echo =======================Start deploy JMeter Slaves==============='
 //                            sh 'helm init --client-only'
 //                            sh 'helm repo update'
-                              sh 'helm install --wait stable/distributed-jmeter --name distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} --set server.replicaCount=${noOfSlaveNodes},master.replicaCount=0,image.repository=gvasanka/jmeter-plugins,image.tag=5.1.1,image.pullPolicy=Always'
+                              sh 'helm install --wait stable/distributed-jmeter --name distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} --set server.replicaCount=${noOfSlaveNodes},master.replicaCount=0,image.repository=gvasanka/jmeter-plugins,image.tag=5.1.1'
                               sh 'kubectl wait --for=condition=ready pods -l app.kubernetes.io/instance=distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} --timeout=90s'
                               sh 'echo =======================Finishing deploy JMeter Slaves==============='
                         }
@@ -46,7 +46,6 @@ pipeline {
                         sh 'echo ===============Start copying data files======================='
                         sh 'pwd'
                         sh 'for pod in $(kubectl get pod -l app.kubernetes.io/instance=distributed-jmeter-${JOBNAME}-${BUILD_NUMBER} -o custom-columns=:metadata.name); do kubectl cp src/test/data/ $pod:/opt/perf-test-data;done;'
-                        sh 'sleep 10m'
                         sh 'echo ===============Finishing copying data files======================='
                     }
                 }
