@@ -40,7 +40,7 @@ spec:
   volumes:
     - name: m2-volume
       persistentVolumeClaim:
-        claimName: maven-pv-claim
+        claimName: maven-efs-pv-claim
     - name: helm-volume
       persistentVolumeClaim:
-        claimName: helm-pv-claim
+        claimName: helm-efs-pv-claim
