@@ -49,7 +49,7 @@
                     </testFilesIncluded>
                     <remoteConfig>
                         <startServersBeforeTests>true</startServersBeforeTests>
-<!--                        <stopServersAfterTests>true</stopServersAfterTests>-->
+                        <stopServersAfterTests>true</stopServersAfterTests>
                         <serverList>${jenkinsSlaveNodes}</serverList>
                     </remoteConfig>
                     <propertiesJMeter>
@@ -57,11 +57,15 @@
                         <https.socket.protocols>TLSv1.2</https.socket.protocols>
                     </propertiesJMeter>
                     <propertiesGlobal>
+<!--
+        Define your project custom variables need pass to the JMeter script
                         <serverURL>${serverURL}</serverURL>
                         <serverPortHTTP>${serverPortHTTP}</serverPortHTTP>
                         <serverPortHTTPS>${serverPortHTTPS}</serverPortHTTPS>
                         <apiServerURL>${apiServerURL}</apiServerURL>
                         <pThinktime>${pThinktime}</pThinktime>
+
+-->
                     </propertiesGlobal>
                     <propertiesUser>
                         <server.rmi.ssl.disable>true</server.rmi.ssl.disable>
