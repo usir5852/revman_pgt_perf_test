@@ -65,7 +65,9 @@ pipeline {
                 steps {
                     sh 'echo ===============Start read Performance Test Results======================='
                     sh 'pwd'
-                    perfReport 'target/jmeter/results/${scriptName}.csv'
+//                     perfReport 'target/jmeter/results/${scriptName}.csv'
+                    script{env.reportPath =target/jmeter/results/${scriptName}.csv}
+                    perfReport '${reportPath}'
                     sh 'echo ===============Finishing Performance Test Results======================='
                 }
             }
