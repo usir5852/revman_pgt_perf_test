@@ -12,6 +12,7 @@ pipeline {
 
     parameters {
             string(defaultValue: "1", description: 'How many slave required ?', name: 'noOfSlaveNodes')
+            string(defaultValue: "httpCounterDocker", description: 'which JMeter script you want to execute ?', name: 'scriptName')
     }
 
     stages {
@@ -64,7 +65,7 @@ pipeline {
                 steps {
                     sh 'echo ===============Start read Performance Test Results======================='
                     sh 'pwd'
-                    perfReport 'target/jmeter/results/httpCounterDocker.csv'
+                    perfReport 'target/jmeter/results/${scriptName}.csv'
                     sh 'echo ===============Finishing Performance Test Results======================='
                 }
             }

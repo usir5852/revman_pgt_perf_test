@@ -45,7 +45,7 @@
                         </arguments>
                     </jMeterProcessJVMSettings>
                     <testFilesIncluded>
-                        <jMeterTestFile>httpCounterDocker.jmx</jMeterTestFile>
+                        <jMeterTestFile>${scriptName}.jmx</jMeterTestFile>
                     </testFilesIncluded>
                     <remoteConfig>
                         <startServersBeforeTests>true</startServersBeforeTests>
