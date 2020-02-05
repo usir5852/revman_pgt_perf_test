@@ -56,7 +56,16 @@ pipeline {
                     container('maven'){
                         sh 'echo ===============Start maven build execution======================='
                         sh 'echo ${jenkinsSlaveNodes}'
-                        sh 'mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes}'
+                        sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes}'''
+//                         Actual project maven build command have to be define like below with all the custom parameters
+//                         sh '''mvn -X clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -DscriptName=${scriptName} -Dprotocol=${protocol} -DserverIP=${serverIP} \
+//                                                      -DpUserData=${pUserData} -DpICThreadCount=${pICThreadCount} -DpICRampupTime=${pICRampupTime} -DpICStepCount=${pICStepCount} \
+//                                                      -DpICDuration=${pICDuration} -DpVCThreadCount=${pVCThreadCount} -DpVCRampupTime=${pVCRampupTime} -DpVCStepCount=${pVCStepCount} \
+//                                                      -DpVCDuration=${pVCDuration} -DpThinktime=${pThinktime} -Dsyy_itm_vnd_ui_master=${syy_itm_vnd_ui_master} -DloginWebUI=${loginWebUI} \
+//                                                      -Dcframeworkservice=${cframeworkservice} -DpPacing=${pPacing} -Dsyy_itm_vnd_ui_master_approve=${syy_itm_vnd_ui_master_approve}  \
+//                                                      -Dhost=${host} -DGenerated_Vendor_Namep=${Generated_Vendor_Namep} -DSTEP_ID=${STEP_ID} \
+//                                                      -Dprojectbuild=${projectbuild} -Dprojectbuildversion=${projectbuildversion}'''
+
                         sh 'echo ===============Finishing maven build execution======================='
                     }
                 }
@@ -65,9 +74,7 @@ pipeline {
                 steps {
                     sh 'echo ===============Start read Performance Test Results======================='
                     sh 'pwd'
-//                     perfReport 'target/jmeter/results/${scriptName}.csv'
-                    script{env.reportPath =target/jmeter/results/${scriptName}.csv}
-                    perfReport '${reportPath}'
+                    perfReport 'target/jmeter/results/*.csv'
                     sh 'echo ===============Finishing Performance Test Results======================='
                 }
             }
