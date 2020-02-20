@@ -15,10 +15,10 @@ pipeline {
 
     parameters {
 //    Project On-board TASK 2::   define how many JMeter slave nodes you required for the test
-            string(defaultValue: "1", description: 'How many slave required ?', name: 'noOfSlaveNodes')
+            string(defaultValue: "1", description: 'How many JMeter slaves required?', name: 'noOfSlaveNodes')
 
 //    Project On-board TASK 3::    define JMeter performance script name you want to execute
-            string(defaultValue: "httpCounterDocker", description: 'which JMeter script you want to execute ?', name: 'scriptName')
+            string(defaultValue: "httpCounterDocker", description: 'which JMeter script you want to execute?', name: 'scriptName')
 
 //    Project On-board TASK 4::
 //          All the project related custom parameters should be define under here
