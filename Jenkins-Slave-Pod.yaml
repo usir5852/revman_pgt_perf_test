@@ -15,10 +15,10 @@ spec:
       resources:
         requests:
           memory: "256Mi"
-          cpu: "250m"
+          cpu: "200m"
         limits:
           memory: "512Mi"
-          cpu: "500m"
+          cpu: "400m"
       volumeMounts:
         - mountPath: /root/.m2
           name: m2-volume
