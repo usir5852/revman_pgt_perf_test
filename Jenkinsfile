@@ -14,9 +14,9 @@ pipeline {
     }
 
     parameters {
-
 //    Project On-board TASK 2::
 //          All the project related custom parameters should be define under here
+        string(defaultValue: "1", description: 'custom param description?', name: 'customParam')
     }
 
     stages {
