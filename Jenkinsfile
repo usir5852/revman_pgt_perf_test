@@ -78,7 +78,7 @@ pipeline {
 //                                                      -Dcframeworkservice=${cframeworkservice} -DpPacing=${pPacing} -Dsyy_itm_vnd_ui_master_approve=${syy_itm_vnd_ui_master_approve}  \
 //                                                      -Dhost=${host} -DGenerated_Vendor_Namep=${Generated_Vendor_Namep} -DSTEP_ID=${STEP_ID} \
 //                                                      -Dprojectbuild=${projectbuild} -Dprojectbuildversion=${projectbuildversion}'''
-                        sh '''mvn clean -X install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -DscriptName=${scriptName}'''
+                        sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -DscriptName=${scriptName}'''
                         sh 'echo ===============Finishing maven build execution======================='
                     }
                 }
