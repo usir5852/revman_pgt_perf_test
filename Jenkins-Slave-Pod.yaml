@@ -14,11 +14,11 @@ spec:
       tty: true
       resources:
         requests:
-          memory: "512Mi"
-          cpu: "200m"
-        limits:
           memory: "1024Mi"
-          cpu: "400m"
+          cpu: "250"
+        limits:
+          memory: "1536Mi"
+          cpu: "500m"
       volumeMounts:
         - mountPath: /root/.m2
           name: m2-volume
@@ -29,10 +29,10 @@ spec:
       tty: true
       resources:
         requests:
-          memory: "128Mi"
+          memory: "256Mi"
           cpu: "100m"
         limits:
-          memory: "256Mi"
+          memory: "512Mi"
           cpu: "200m"
       volumeMounts:
         - mountPath: /root/.helm
