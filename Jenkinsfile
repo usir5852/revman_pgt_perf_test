@@ -66,14 +66,14 @@ pipeline {
                         sh 'echo ${jenkinsSlaveNodes}'
 //    Project On-board TASK 4::
 //                         Project maven build command have to define like below passing all the required custom parameters
-//                         sh '''mvn clean install -Dprotocol=${protocol} -DserverIP=${serverIP} \
+//                         sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -Dprotocol=${protocol} -DserverIP=${serverIP} \
 //                                                      -DpUserData=${pUserData} -DpICThreadCount=${pICThreadCount} -DpICRampupTime=${pICRampupTime} -DpICStepCount=${pICStepCount} \
 //                                                      -DpICDuration=${pICDuration} -DpVCThreadCount=${pVCThreadCount} -DpVCRampupTime=${pVCRampupTime} -DpVCStepCount=${pVCStepCount} \
 //                                                      -DpVCDuration=${pVCDuration} -DpThinktime=${pThinktime} -Dsyy_itm_vnd_ui_master=${syy_itm_vnd_ui_master} -DloginWebUI=${loginWebUI} \
 //                                                      -Dcframeworkservice=${cframeworkservice} -DpPacing=${pPacing} -Dsyy_itm_vnd_ui_master_approve=${syy_itm_vnd_ui_master_approve}  \
 //                                                      -Dhost=${host} -DGenerated_Vendor_Namep=${Generated_Vendor_Namep} -DSTEP_ID=${STEP_ID} \
 //                                                      -Dprojectbuild=${projectbuild} -Dprojectbuildversion=${projectbuildversion}'''
-                        sh '''mvn clean install'''
+                        sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes}'''
                         sh 'echo ===============Finishing maven build execution======================='
                     }
                 }
