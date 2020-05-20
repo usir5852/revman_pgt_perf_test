@@ -1,20 +1,20 @@
 # JMete slave pod deployment default values
 
-#JMeter slave node related configurations cpu, memory,..etc can customized from this file
+# JMeter slave node related configurations cpu, memory,docker image,..etc can customized from this file
 
 # POD related configuration
 pod:
   # The number of JMete slave pods required
   replicaCount: 1
 
-# POD resource configuration
+# JMeter Slave POD resource configuration
 resources:
     limits:
       cpu: 1000m
-      memory: 2048Mi
+      memory: 756Mi
     requests:
       cpu: 500m
-      memory: 1536Mi
+      memory: 512Mi
 
 # POD image configuration
 image:
@@ -22,11 +22,12 @@ image:
   tag: 5.1.1
   pullPolicy: IfNotPresent
 
+
 # JMeter JVM memory configuration
 jmeter:
   xms:
     #  Xms<size>        set initial Java heap size
-    memory: 1024M
+    memory: 512M
   xmx:
     #  Xmx<size>        set maximum Java heap size
-    memory: 1536M
+    memory: 512M
