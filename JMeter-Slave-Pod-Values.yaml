@@ -11,10 +11,10 @@ pod:
 resources:
     limits:
       cpu: 1000m
-      memory: 756Mi
+      memory: 1536Mi
     requests:
       cpu: 500m
-      memory: 512Mi
+      memory: 1024Mi
 
 # POD image configuration
 image:
@@ -27,7 +27,7 @@ image:
 jmeter:
   xms:
     #  Xms<size>        set initial Java heap size
-    memory: 512M
+    memory: 1024M
   xmx:
     #  Xmx<size>        set maximum Java heap size
-    memory: 512M
+    memory: 1024M
