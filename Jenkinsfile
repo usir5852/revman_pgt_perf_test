@@ -16,7 +16,7 @@ pipeline {
     parameters {
 //    Project On-board TASK 2::
 //          All the project related custom parameters should be define under here
-        string(defaultValue: "httpCounterDocker.jmx", description: 'custom param description?', name: 'scriptName')
+        string(defaultValue: "httpCounterDocker", description: 'custom param description?', name: 'scriptName')
     }
 
     stages {
