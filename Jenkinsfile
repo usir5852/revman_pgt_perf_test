@@ -16,7 +16,7 @@ pipeline {
     parameters {
 //    Project On-board TASK 2::
 //          All the project related custom parameters should be define under here
-        string(defaultValue: "1", description: 'custom param description?', name: 'customParam')
+        string(defaultValue: "httpCounterDocker.jmx", description: 'custom param description?', name: 'scriptName')
     }
 
     stages {
@@ -73,7 +73,7 @@ pipeline {
 //                                                      -Dcframeworkservice=${cframeworkservice} -DpPacing=${pPacing} -Dsyy_itm_vnd_ui_master_approve=${syy_itm_vnd_ui_master_approve}  \
 //                                                      -Dhost=${host} -DGenerated_Vendor_Namep=${Generated_Vendor_Namep} -DSTEP_ID=${STEP_ID} \
 //                                                      -Dprojectbuild=${projectbuild} -Dprojectbuildversion=${projectbuildversion}'''
-                        sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes}'''
+                        sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -DscriptName=${scriptName}'''
                         sh 'echo ===============Finishing maven build execution======================='
                     }
                 }
