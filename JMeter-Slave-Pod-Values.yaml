@@ -18,7 +18,7 @@ resources:
 
 # POD image configuration
 image:
-  repository: "docker push gvasanka/jmeter-tail-log"
+  repository: "gvasanka/jmeter-tail-log:5.1.1"
   tag: 5.1.1
   pullPolicy: IfNotPresent
 
