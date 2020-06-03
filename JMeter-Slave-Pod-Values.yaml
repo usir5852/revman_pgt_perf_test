@@ -20,7 +20,7 @@ resources:
 image:
   repository: "gvasanka/jmeter-tail-log"
   tag: 5.1.1
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 # JMeter JVM memory configuration
 jmeter:
