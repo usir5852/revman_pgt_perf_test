@@ -18,7 +18,7 @@ resources:
 
 # POD image configuration
 image:
-  repository: "jmeter-plugins-slave-extended-log"
+  repository: "gvasanka/jmeter-plugins-slave-extended-log"
   tag: 5.1.1
   pullPolicy: IfNotPresent
 
