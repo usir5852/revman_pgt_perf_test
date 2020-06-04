@@ -18,9 +18,10 @@ resources:
 
 # POD image configuration
 image:
-  repository: "gvasanka/jmeter-tail-log"
-  tag: 5.2.1
-  pullPolicy: Always
+  repository: "jmeter-plugins-slave-extended-log"
+  tag: 5.1.1
+  pullPolicy: IfNotPresent
+
 
 # JMeter JVM memory configuration
 jmeter:
