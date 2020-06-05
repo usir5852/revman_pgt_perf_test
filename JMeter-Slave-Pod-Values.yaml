@@ -5,7 +5,7 @@
 # POD related configuration
 pod:
   # The number of JMete slave pods required
-  replicaCount: 10
+  replicaCount: 1
 
 # POD resource configuration
 resources:
