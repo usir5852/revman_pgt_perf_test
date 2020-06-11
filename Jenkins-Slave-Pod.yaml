@@ -7,7 +7,7 @@ metadata:
 spec:
   serviceAccountName: jenkins-release
   containers:
-    - name: maven
+    - name: distributed-jmeter-master
       image: maven:alpine
       command:
         - cat
