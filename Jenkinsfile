@@ -66,7 +66,7 @@ pipeline {
             }
             stage('Execute Performance Test') {
                 steps {
-                    container('maven'){
+                    container('distributed-jmeter-master'){
                         sh 'echo ===============Start maven build execution======================='
                         sh 'echo ${jenkinsSlaveNodes}'
 //    Project On-board TASK 6::
