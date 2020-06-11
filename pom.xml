@@ -94,7 +94,7 @@
                     <downloadExtensionDependencies>false</downloadExtensionDependencies>
                     <generateReports>true</generateReports>
                     <testResultsTimestamp>false</testResultsTimestamp>
-                    <overrideRootLogLevel>debug</overrideRootLogLevel>
+<!--                    <overrideRootLogLevel>debug</overrideRootLogLevel>-->
                 </configuration>
             </plugin>
         </plugins>
