@@ -10,7 +10,7 @@ pipeline {
 //    Project On-board TASK 1::
 //          Preferred project name can be given here as JOBNAME, But make sure to use only lower case letters (a-z) and digits (0-9) on your names. Ex brakes1
 //          Restriction comes from Kubernetes side, Kubernetes only allow digits (0-9), lower case letters (a-z), -, and . characters in resource names https://kubernetes.io/docs/concepts/overview/working-with-objects/names/
-            JOBNAME = "jmeterdynamic"
+            JOBNAME = "sprintdemo"
     }
 
     parameters {
