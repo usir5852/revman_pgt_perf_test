@@ -94,7 +94,7 @@ pipeline {
             stage('Erase JMeter Slaves') {
                       steps {
                             container('kubehelm'){
-                                 sh 'sleep 30m'
+//                                  sh 'sleep 30m'    // In case want to backup some files from jmeter slave machines, talk to perf team and add a sleep as here
                                  sh 'echo ==============Start Erasing JMeter Slaves========================'
                                  sh 'helm delete --purge distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER}'
                                  sh 'kubectl wait --for=delete pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} --timeout=90s'
