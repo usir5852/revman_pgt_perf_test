@@ -14,14 +14,9 @@ pipeline {
     }
 
     parameters {
-//    Project On-board TASK 2::   define how many JMeter slave nodes you required for the test
-            string(defaultValue: "1", description: 'How many JMeter slaves required?', name: 'noOfSlaveNodes')
-
-//    Project On-board TASK 3::    define JMeter performance script name you want to execute
-            string(defaultValue: "httpCounterDocker", description: 'which JMeter script you want to execute?', name: 'scriptName')
-
-//    Project On-board TASK 4::
+//    Project On-board TASK 2::
 //          All the project related custom parameters should be define under here
+        string(defaultValue: "httpCounterDocker", description: 'custom param description?', name: 'scriptName')
     }
 
     stages {
@@ -57,7 +52,7 @@ pipeline {
                     container('kubehelm'){
                         sh 'echo ===============Start copying data files======================='
                         sh 'pwd'
-//    Project On-board TASK 5::
+//    Project On-board TASK 3::
 //    Following script copy the JMeter test data files to JMeter slaves, so make sure data file locations defined correctly, If you followed standard project structure nothing to change here.
                         sh 'for pod in $(kubectl get pod -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o custom-columns=:metadata.name); do kubectl cp src/test/data/ $pod:/opt/perf-test-data;done;'
                         sh 'echo ===============Finishing copying data files======================='
@@ -69,9 +64,9 @@ pipeline {
                     container('distributed-jmeter-master'){
                         sh 'echo ===============Start maven build execution======================='
                         sh 'echo ${jenkinsSlaveNodes}'
-//    Project On-board TASK 6::
+//    Project On-board TASK 4::
 //                         Project maven build command have to define like below passing all the required custom parameters
-//                         sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -DscriptName=${scriptName} -Dprotocol=${protocol} -DserverIP=${serverIP} \
+//                         sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -Dprotocol=${protocol} -DserverIP=${serverIP} \
 //                                                      -DpUserData=${pUserData} -DpICThreadCount=${pICThreadCount} -DpICRampupTime=${pICRampupTime} -DpICStepCount=${pICStepCount} \
 //                                                      -DpICDuration=${pICDuration} -DpVCThreadCount=${pVCThreadCount} -DpVCRampupTime=${pVCRampupTime} -DpVCStepCount=${pVCStepCount} \
 //                                                      -DpVCDuration=${pVCDuration} -DpThinktime=${pThinktime} -Dsyy_itm_vnd_ui_master=${syy_itm_vnd_ui_master} -DloginWebUI=${loginWebUI} \
