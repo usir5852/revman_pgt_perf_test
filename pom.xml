@@ -8,10 +8,13 @@
     <artifactId>jmeter-dynamic-instances-poc</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
     <name>jmeter-dynamic-instances-poc</name>
     <url>http://maven.apache.org</url>
+
     <dependencies>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -49,7 +52,7 @@
                     </testFilesIncluded>
                     <remoteConfig>
                         <startServersBeforeTests>true</startServersBeforeTests>
-<!--                        <stopServersAfterTests>true</stopServersAfterTests>-->
+<!--                    <stopServersAfterTests>true</stopServersAfterTests>-->
                         <serverList>${jenkinsSlaveNodes}</serverList>
                     </remoteConfig>
                     <propertiesJMeter>
@@ -57,15 +60,14 @@
                         <https.socket.protocols>TLSv1.2</https.socket.protocols>
                     </propertiesJMeter>
                     <propertiesGlobal>
-<!--
-        Define your project custom variables need pass to the JMeter script
+                    <!--
+                     Define your project custom variables need pass to the JMeter script
                         <serverURL>${serverURL}</serverURL>
                         <serverPortHTTP>${serverPortHTTP}</serverPortHTTP>
                         <serverPortHTTPS>${serverPortHTTPS}</serverPortHTTPS>
                         <apiServerURL>${apiServerURL}</apiServerURL>
                         <pThinktime>${pThinktime}</pThinktime>
-
--->
+                    -->
                     </propertiesGlobal>
                     <propertiesUser>
                         <server.rmi.ssl.disable>true</server.rmi.ssl.disable>
@@ -85,16 +87,14 @@
                         <artifact>kg.apc:jmeter-plugins-prmctl:0.4</artifact>
                         <artifact>kg.apc:jmeter-plugins-tst:2.5</artifact>
                         <artifact>kg.apc:jmeter-plugins-webdriver:3.1</artifact>
+                        <artifact>kg.apc:jmeter-plugins-dummy:0.4</artifact>
                         <artifact>com.blazemeter:jmeter-parallel:0.9</artifact>
                         <artifact>com.sysco.qe:qperf_core:0.0.2</artifact>
                     </jmeterExtensions>
-                    <!-- The plugin uses some broken dependencies
-                         An alternative is to set this to true and use excludedArtifacts, see below
-                    -->
                     <downloadExtensionDependencies>false</downloadExtensionDependencies>
                     <generateReports>true</generateReports>
                     <testResultsTimestamp>false</testResultsTimestamp>
-<!--                    <overrideRootLogLevel>debug</overrideRootLogLevel>-->
+<!--                <overrideRootLogLevel>debug</overrideRootLogLevel>-->
                 </configuration>
             </plugin>
         </plugins>
@@ -102,7 +102,6 @@
     <organization>
     </organization>
     <properties>
-        <perf.testplan>*</perf.testplan>
         <xms.setting>1024</xms.setting>
         <xmx.setting>1024</xmx.setting>
     </properties>
