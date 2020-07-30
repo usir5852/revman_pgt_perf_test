@@ -13,16 +13,16 @@ pipeline {
             JOBNAME = "sprintdemo"
     }
 
-    parameters {
-//    Project On-board TASK 2::   define how many JMeter slave nodes you required for the test
-            file(description: 'Upload your JMeter Parameter file', name: 'parameterFile.properties')
-
-//    Project On-board TASK 3::    define JMeter performance script name you want to execute
-            string(defaultValue: "httpCounterDocker", description: 'which JMeter script you want to execute?', name: 'scriptName')
-
-//    Project On-board TASK 4::
-//          All the project related custom parameters should be define under here
-    }
+//     parameters {
+// //    Project On-board TASK 2::   define how many JMeter slave nodes you required for the test
+// //             file(description: 'Upload your JMeter Parameter file', name: 'parameterFile.properties')
+//
+// //    Project On-board TASK 3::    define JMeter performance script name you want to execute
+//             string(defaultValue: "httpCounterDocker", description: 'which JMeter script you want to execute?', name: 'scriptName')
+//
+// //    Project On-board TASK 4::
+// //          All the project related custom parameters should be define under here
+//     }
 
     stages {
             stage('Deploy JMeter Slaves') {
