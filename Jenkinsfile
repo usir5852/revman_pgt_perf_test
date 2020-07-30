@@ -68,6 +68,7 @@ pipeline {
                 steps {
                     container('distributed-jmeter-master'){
                         sh 'echo ===============Start maven build execution======================='
+                        sh 'sleep 20m'
                         sh 'echo ${jenkinsSlaveNodes}'
 //    Project On-board TASK 6::
 //                         Project maven build command have to define like below passing all the required custom parameters

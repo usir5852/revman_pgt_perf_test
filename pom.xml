@@ -72,6 +72,10 @@
                         <httpsampler.ignore_failed_embedded_resources>true</httpsampler.ignore_failed_embedded_resources>
                     </propertiesUser>
 
+                    <customPropertiesFiles>
+                        <file>/user/home/myuser/test.properties</file>
+                    </customPropertiesFiles>
+
                     <jmeterExtensions>
                         <artifact>kg.apc:jmeter-plugins-extras:1.4.0</artifact>
                         <artifact>kg.apc:jmeter-plugins-standard:1.4.0</artifact>
