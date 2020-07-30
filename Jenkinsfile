@@ -79,7 +79,7 @@ pipeline {
 //                                                      -Dhost=${host} -DGenerated_Vendor_Namep=${Generated_Vendor_Namep} -DSTEP_ID=${STEP_ID} \
 //                                                      -Dprojectbuild=${projectbuild} -Dprojectbuildversion=${projectbuildversion}'''
                         sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -DscriptName=${scriptName}'''
-                        sh 'sleep 20m'
+//                         sh 'sleep 20m'
                         sh 'echo ===============Finishing maven build execution======================='
                     }
                 }
