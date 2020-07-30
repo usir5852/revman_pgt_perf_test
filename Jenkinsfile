@@ -15,7 +15,7 @@ pipeline {
 
     parameters {
 //    Project On-board TASK 2::   define how many JMeter slave nodes you required for the test
-            file(description: 'Upload your JMeter Parameter file', name: 'ParameterFile')
+            file(fileLocation:'test.properties',description: 'Upload your JMeter Parameter file', name: 'ParameterFile')
 
 //    Project On-board TASK 3::    define JMeter performance script name you want to execute
             string(defaultValue: "httpCounterDocker", description: 'which JMeter script you want to execute?', name: 'scriptName')
