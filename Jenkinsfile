@@ -13,16 +13,16 @@ pipeline {
             JOBNAME = "sprintdemo"
     }
 
-//     parameters {
-// //    Project On-board TASK 2::   define how many JMeter slave nodes you required for the test
-// //             file(description: 'Upload your JMeter Parameter file', name: 'parameterFile.properties')
-//
-// //    Project On-board TASK 3::    define JMeter performance script name you want to execute
-//             string(defaultValue: "httpCounterDocker", description: 'which JMeter script you want to execute?', name: 'scriptName')
-//
-// //    Project On-board TASK 4::
-// //          All the project related custom parameters should be define under here
-//     }
+    parameters {
+//    Project On-board TASK 2::   define how many JMeter slave nodes you required for the test
+//             file(description: 'Upload your JMeter Parameter file', name: 'parameterFile.properties')
+
+//    Project On-board TASK 3::    define JMeter performance script name you want to execute
+            string(defaultValue: "httpCounterDocker", description: 'which JMeter script you want to execute?', name: 'scriptName')
+
+//    Project On-board TASK 4::
+//          All the project related custom parameters should be define under here
+    }
 
     stages {
             stage('Deploy JMeter Slaves') {
@@ -68,7 +68,6 @@ pipeline {
                 steps {
                     container('distributed-jmeter-master'){
                         sh 'echo ===============Start maven build execution======================='
-                        sh 'sleep 20m'
                         sh 'echo ${jenkinsSlaveNodes}'
 //    Project On-board TASK 6::
 //                         Project maven build command have to define like below passing all the required custom parameters
@@ -80,6 +79,7 @@ pipeline {
 //                                                      -Dhost=${host} -DGenerated_Vendor_Namep=${Generated_Vendor_Namep} -DSTEP_ID=${STEP_ID} \
 //                                                      -Dprojectbuild=${projectbuild} -Dprojectbuildversion=${projectbuildversion}'''
                         sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -DscriptName=${scriptName}'''
+                        sh 'sleep 20m'
                         sh 'echo ===============Finishing maven build execution======================='
                     }
                 }
