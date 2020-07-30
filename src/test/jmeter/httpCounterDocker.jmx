@@ -224,11 +224,11 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="-868349216">
+          <collectionProp name="-2032751019">
             <stringProp name="1567">10</stringProp>
             <stringProp name="52">4</stringProp>
             <stringProp name="1567">10</stringProp>
-            <stringProp name="1567005">3000</stringProp>
+            <stringProp name="1722">60</stringProp>
             <stringProp name="10">10</stringProp>
           </collectionProp>
         </collectionProp>
