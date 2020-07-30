@@ -73,7 +73,7 @@
                     </propertiesUser>
 
                     <customPropertiesFiles>
-                        <file>/user/home/myuser/test.properties</file>
+                        <file>src/property/test.properties</file>
                     </customPropertiesFiles>
 
                     <jmeterExtensions>
