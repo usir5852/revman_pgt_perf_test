@@ -72,6 +72,7 @@
                         <httpsampler.ignore_failed_embedded_resources>true</httpsampler.ignore_failed_embedded_resources>
                     </propertiesUser>
 
+                    <propertiesFilesDirectory>src/test/property</propertiesFilesDirectory>
 <!--                    <customPropertiesFiles>-->
 <!--                        <file>src/property/test.properties</file>-->
 <!--                    </customPropertiesFiles>-->
