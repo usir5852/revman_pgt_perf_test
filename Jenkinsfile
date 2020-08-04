@@ -25,6 +25,11 @@ pipeline {
     }
 
     stages {
+            stage("upload") {
+                     def inputFile = input message: 'Upload file', parameters: [file(name: 'input.json')]
+                     new hudson.FilePath(new File("$workspace/input.json")).copyFrom(inputFile)
+                inputFile.delete()
+            }
             stage('Deploy JMeter Slaves') {
                    steps {
                         container('kubehelm'){
