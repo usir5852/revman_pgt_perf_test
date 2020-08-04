@@ -47,15 +47,15 @@
                     <testFilesIncluded>
                         <jMeterTestFile>${scriptName}.jmx</jMeterTestFile>
                     </testFilesIncluded>
-<!--                    <remoteConfig>-->
-<!--                        <startServersBeforeTests>true</startServersBeforeTests>-->
-<!--&lt;!&ndash;                        <stopServersAfterTests>true</stopServersAfterTests>&ndash;&gt;-->
-<!--                        <serverList>${jenkinsSlaveNodes}</serverList>-->
-<!--                    </remoteConfig>-->
-<!--                    <propertiesJMeter>-->
-<!--                        <client.rmi.localport>1099</client.rmi.localport>-->
-<!--                        <https.socket.protocols>TLSv1.2</https.socket.protocols>-->
-<!--                    </propertiesJMeter>-->
+                    <remoteConfig>
+                        <startServersBeforeTests>true</startServersBeforeTests>
+<!--                        <stopServersAfterTests>true</stopServersAfterTests>-->
+                        <serverList>${jenkinsSlaveNodes}</serverList>
+                    </remoteConfig>
+                    <propertiesJMeter>
+                        <client.rmi.localport>1099</client.rmi.localport>
+                        <https.socket.protocols>TLSv1.2</https.socket.protocols>
+                    </propertiesJMeter>
                     <propertiesGlobal>
 <!--
         Define your project custom variables need pass to the JMeter script
