@@ -18,6 +18,16 @@
             <stringProp name="Argument.value">${__P(apiHostname,test2)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="threadCount" elementType="Argument">
+            <stringProp name="Argument.name">threadCount</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount,5)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="holdTime" elementType="Argument">
+            <stringProp name="Argument.name">holdTime</stringProp>
+            <stringProp name="Argument.value">${__P(holdTime,5)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
@@ -224,11 +234,11 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="-2032751019">
-            <stringProp name="1567">10</stringProp>
+          <collectionProp name="1419332423">
+            <stringProp name="472454735">${threadCount}</stringProp>
             <stringProp name="52">4</stringProp>
             <stringProp name="1567">10</stringProp>
-            <stringProp name="1722">60</stringProp>
+            <stringProp name="-1770471718">${holdTime}</stringProp>
             <stringProp name="10">10</stringProp>
           </collectionProp>
         </collectionProp>
