@@ -80,8 +80,7 @@ pipeline {
 //                                                      -Dprojectbuild=${projectbuild} -Dprojectbuildversion=${projectbuildversion}'''
                         sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -DscriptName=${scriptName}'''
 //                         sh 'sleep 20m'
-                        sh 'echo ========
-                         =======Finishing maven build execution======================='
+                        sh 'echo ===============Finishing maven build execution======================='
                     }
                 }
             }
