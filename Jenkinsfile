@@ -4,6 +4,12 @@ pipeline {
             kubernetes {
                   yamlFile 'Jenkins-Slave-Pod.yaml'  // path to the pod definition relative to the root of our project
              }
+             deleteDir()
+                 stage("upload") {
+                      def inputFile = input message: 'Upload file', parameters: [file(name: 'input.json')]
+                      new hudson.FilePath(new File("$workspace/input.json")).copyFrom(inputFile)
+                 inputFile.delete()
+             }
     }
 
     environment {
@@ -25,11 +31,6 @@ pipeline {
     }
 
     stages {
-            stage("upload") {
-                     def inputFile = input message: 'Upload file', parameters: [file(name: 'input.json')]
-                     new hudson.FilePath(new File("$workspace/input.json")).copyFrom(inputFile)
-                inputFile.delete()
-            }
             stage('Deploy JMeter Slaves') {
                    steps {
                         container('kubehelm'){
