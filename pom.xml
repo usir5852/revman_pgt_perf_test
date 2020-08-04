@@ -72,9 +72,9 @@
                         <httpsampler.ignore_failed_embedded_resources>true</httpsampler.ignore_failed_embedded_resources>
                     </propertiesUser>
 
-                    <customPropertiesFiles>
-                        <file>src/property/test.properties</file>
-                    </customPropertiesFiles>
+<!--                    <customPropertiesFiles>-->
+<!--                        <file>src/property/test.properties</file>-->
+<!--                    </customPropertiesFiles>-->
 
                     <jmeterExtensions>
                         <artifact>kg.apc:jmeter-plugins-extras:1.4.0</artifact>
