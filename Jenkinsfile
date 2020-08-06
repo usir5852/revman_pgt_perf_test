@@ -25,18 +25,6 @@ pipeline {
     }
 
     stages {
-             stage('Get Jenkins Slave Name') {
-                   steps {
-                        container('kubehelm'){
-                             script{
-                                  print "=================Get Jenkins Slave Name====================="
-                                  println("IP Details: ${env.NODE_NAME}")
-                                  print "===================Finishing Get Jenkins Slave Name==================="
-                              }
-                        }
-                   }
-             }
-
             stage('file input') {
                 steps {
                       node('master') {
@@ -44,12 +32,30 @@ pipeline {
                                     // Get file using input step, will put it in build directory
                                     def inputFile = input message: 'Upload file', parameters: [file(name: 'data.txt')]
                                     // Read contents and write to workspace
-                                    writeFile(file: 'data.txt', text: inputFile.readToString())
+                                    writeFile(file: 'global.properties', text: inputFile.readToString())
                                     // Stash it for use in a different part of the pipeline
-                                    stash name: 'data', includes: 'data.txt'
+                                    stash name: 'data', includes: 'global.properties'
                             }
                       }
+
+                      container('kubehelm'){
+                             script{
+                                  print "=================Get Jenkins Slave Name====================="
+                                  env.jenkinsMasterPodName = sh(returnStdout: true, script:'kubectl get pods -l app.kubernetes.io/component=jenkins-master -o jsonpath=\'{.items[*]..metadata.name}\'')
+                                  println("Jenkins Pod Name Details: ${env.jenkinsMasterPodName}")
+                                  print "===================Finishing Get Jenkins Slave Name==================="
+                              }
+                             sh 'kubectl cp global.properties ${env.jenkinsMasterPodName}:/opt/perf-test-data'
+                      }
                 }
+            }
+
+            stage('Copy Property file Jenkins Slave') {
+                  steps {
+                        container('kubehelm'){
+                            sh 'kubectl cp src/test/data/ $pod:/opt/perf-test-data'
+                        }
+                   }
             }
 
             stage('Deploy JMeter Slaves') {
