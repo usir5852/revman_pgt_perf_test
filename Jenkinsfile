@@ -25,6 +25,18 @@ pipeline {
     }
 
     stages {
+             stage('Get Jenkins Slave Name) {
+                                steps {
+                                    container('kubehelm'){
+                                        script{
+                                              print "=================Get Jenkins Slave Name====================="
+                                              println("IP Details: ${env.NODE_NAME}")
+                                              print "===================Finishing Get Jenkins Slave Name==================="
+                                        }
+                                    }
+                                }
+             }
+
             stage('file input') {
                 steps {
                       node('master') {
@@ -38,21 +50,6 @@ pipeline {
                             }
                       }
                 }
-            }
-
-            stage('do something with data') {
-                steps {
-                    node('master') {
-                        script{
-                            // Unstash the file into an 'input' directory in the workspace
-                            dir('input') {
-                              unstash 'data'
-                            }
-                            // do something useful
-                            sh "ls -lR input/"
-                        }
-                    }
-                 }
             }
 
             stage('Deploy JMeter Slaves') {
@@ -69,14 +66,14 @@ pipeline {
                         }
                     }
             }
-            stage('Search Slave IP details') {
+            stage('Get JMeter SlaveNodes IP details') {
                     steps {
                         container('kubehelm'){
                             script{
                                   print "=================Start search for slave IP details====================="
                                   print "Searching for Jmeter Slave IPs"
-                                  env.jenkinsSlaveNodes = sh(returnStdout: true, script:'kubectl get pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o jsonpath=\'{.items[*].status.podIP}\' | tr \' \' \',\'')
-                                  println("IP Details: ${env.jenkinsSlaveNodes}")
+                                  env.jmeterSlaveNodes = sh(returnStdout: true, script:'kubectl get pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o jsonpath=\'{.items[*].status.podIP}\' | tr \' \' \',\'')
+                                  println("IP Details: ${env.jmeterSlaveNodes}")
                                   print "===================Finishing search for slave IP details==================="
                             }
                         }
@@ -98,17 +95,17 @@ pipeline {
                 steps {
                     container('distributed-jmeter-master'){
                         sh 'echo ===============Start maven build execution======================='
-                        sh 'echo ${jenkinsSlaveNodes}'
+                        sh 'echo ${jmeterSlaveNodes}'
 //    Project On-board TASK 6::
 //                         Project maven build command have to define like below passing all the required custom parameters
-//                         sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -DscriptName=${scriptName} -Dprotocol=${protocol} -DserverIP=${serverIP} \
+//                         sh '''mvn clean install -DjenkinsSlaveNodes=${jmeterSlaveNodes} -DscriptName=${scriptName} -Dprotocol=${protocol} -DserverIP=${serverIP} \
 //                                                      -DpUserData=${pUserData} -DpICThreadCount=${pICThreadCount} -DpICRampupTime=${pICRampupTime} -DpICStepCount=${pICStepCount} \
 //                                                      -DpICDuration=${pICDuration} -DpVCThreadCount=${pVCThreadCount} -DpVCRampupTime=${pVCRampupTime} -DpVCStepCount=${pVCStepCount} \
 //                                                      -DpVCDuration=${pVCDuration} -DpThinktime=${pThinktime} -Dsyy_itm_vnd_ui_master=${syy_itm_vnd_ui_master} -DloginWebUI=${loginWebUI} \
 //                                                      -Dcframeworkservice=${cframeworkservice} -DpPacing=${pPacing} -Dsyy_itm_vnd_ui_master_approve=${syy_itm_vnd_ui_master_approve}  \
 //                                                      -Dhost=${host} -DGenerated_Vendor_Namep=${Generated_Vendor_Namep} -DSTEP_ID=${STEP_ID} \
 //                                                      -Dprojectbuild=${projectbuild} -Dprojectbuildversion=${projectbuildversion}'''
-                        sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -DscriptName=${scriptName}'''
+                        sh '''mvn clean install -DjmeterSlaveNodes=${jmeterSlaveNodes} -DscriptName=${scriptName}'''
 //                         sh 'sleep 20m'
                         sh 'echo ===============Finishing maven build execution======================='
                     }
@@ -116,10 +113,12 @@ pipeline {
             }
             stage('Read Performance Test Results') {
                 steps {
-                    sh 'echo ===============Start read Performance Test Results======================='
-                    sh 'pwd'
-                    perfReport 'target/jmeter/results/*.csv'
-                    sh 'echo ===============Finishing Performance Test Results======================='
+                    container('distributed-jmeter-master'){
+                        sh 'echo ===============Start read Performance Test Results======================='
+                        sh 'pwd'
+                        perfReport 'target/jmeter/results/*.csv'
+                        sh 'echo ===============Finishing Performance Test Results======================='
+                    }
                 }
             }
             stage('Erase JMeter Slaves') {

@@ -50,7 +50,7 @@
                     <remoteConfig>
                         <startServersBeforeTests>true</startServersBeforeTests>
 <!--                        <stopServersAfterTests>true</stopServersAfterTests>-->
-                        <serverList>${jenkinsSlaveNodes}</serverList>
+                        <serverList>${jmeterSlaveNodes}</serverList>
                     </remoteConfig>
                     <propertiesJMeter>
                         <client.rmi.localport>1099</client.rmi.localport>
