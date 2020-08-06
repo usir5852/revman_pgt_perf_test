@@ -26,7 +26,7 @@ pipeline {
 
     stages {
             stage('file input') {
-              node {
+              node('master') {
                 // Get file using input step, will put it in build directory
                 def inputFile = input message: 'Upload file', parameters: [file(name: 'data.txt')]
                 // Read contents and write to workspace
@@ -37,7 +37,7 @@ pipeline {
             }
 
             stage('do something with data') {
-              node {
+              node('master') {
                 // Unstash the file into an 'input' directory in the workspace
                 dir('input') {
                   unstash 'data'
