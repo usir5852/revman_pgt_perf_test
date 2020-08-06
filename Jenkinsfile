@@ -45,7 +45,7 @@ pipeline {
                                   println("Jenkins Pod Name Details: ${env.jenkinsMasterPodName}")
                                   print "===================Finishing Get Jenkins Slave Name==================="
                                   print "===================Copy file==================="
-                                  sh 'kubectl cp ${env.jenkinsMasterPodName}:/var/jenkins_home/workspace/${env.JOB_NAME}/global.properties src/test/property/'
+                                  sh 'kubectl cp ${jenkinsMasterPodName}:/var/jenkins_home/workspace/${JOB_NAME}/global.properties src/test/property/'
                               }
 
                       }
