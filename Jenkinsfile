@@ -25,7 +25,7 @@ pipeline {
     }
 
     stages {
-            stage('file input') {
+            stage('Get properties file from user and send to workspace') {
                 steps {
                       node('master') {
                             script{
@@ -45,17 +45,9 @@ pipeline {
                                   println("Jenkins Pod Name Details: ${env.jenkinsMasterPodName}")
                                   print "===================Finishing Get Jenkins Slave Name==================="
                               }
-                             sh 'kubectl cp global.properties ${env.jenkinsMasterPodName}:/opt/perf-test-data'
+                             sh 'kubectl cp ${env.jenkinsMasterPodName}:/var/jenkins_home/workspace/sprintdemo/global.properties src/test/property/'
                       }
                 }
-            }
-
-            stage('Copy Property file Jenkins Slave') {
-                  steps {
-                        container('kubehelm'){
-                            sh 'kubectl cp src/test/data/ $pod:/opt/perf-test-data'
-                        }
-                   }
             }
 
             stage('Deploy JMeter Slaves') {
