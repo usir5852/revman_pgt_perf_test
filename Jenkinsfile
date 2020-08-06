@@ -11,17 +11,7 @@ pipeline {
 //          Preferred project name can be given here as JOBNAME, But make sure to use only lower case letters (a-z) and digits (0-9) on your names. Ex brakes1
 //          Restriction comes from Kubernetes side, Kubernetes only allow digits (0-9), lower case letters (a-z), -, and . characters in resource names https://kubernetes.io/docs/concepts/overview/working-with-objects/names/
             JOBNAME = "sprintdemo"
-    }
-
-    parameters {
-//    Project On-board TASK 2::   define how many JMeter slave nodes you required for the test
-//             file(description: 'Upload your JMeter Parameter file', name: 'parameterFile.properties')
-
-//    Project On-board TASK 3::    define JMeter performance script name you want to execute
-            string(defaultValue: "httpCounterDocker", description: 'which JMeter script you want to execute?', name: 'scriptName')
-
-//    Project On-board TASK 4::
-//          All the project related custom parameters should be define under here
+            scriptName = "httpCounterDocker"
     }
 
     stages {
@@ -30,7 +20,8 @@ pipeline {
                       node('master') {
                             script{
                                     // Get file using input step, will put it in build directory
-                                    def inputFile = input message: 'Upload file', parameters: [file(name: 'data.txt')]
+                                    print "=================Please upload your property files ====================="
+                                    def inputFile = input message: 'Upload file', parameters: [file(name: 'global.properties')]
                                     // Read contents and write to workspace
                                     writeFile(file: 'global.properties', text: inputFile.readToString())
                                     // Stash it for use in a different part of the pipeline
@@ -57,11 +48,7 @@ pipeline {
                   steps {
                         container('kubehelm'){
                               sh 'echo =======================Start deploy JMeter Slaves==============='
-//                            sh 'helm init --client-only'
-//                            sh 'helm repo add custom https://gvasanka.github.io/jmeter-helm-chart'
-//                            sh 'helm repo update'
                               sh 'helm install --wait custom/jmeter-slave --name distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -f JMeter-Slave-Pod-Values.yaml'
-//                               sh 'helm install --wait stable/distributed-jmeter --name distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} --set server.replicaCount=${noOfSlaveNodes},master.replicaCount=0,image.repository=gvasanka/jmeter-plugins,image.tag=5.1.1'
                               sh 'kubectl wait --for=condition=ready pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} --timeout=90s'
                               sh 'echo =======================Finishing deploy JMeter Slaves==============='
                         }
@@ -97,17 +84,7 @@ pipeline {
                     container('distributed-jmeter-master'){
                         sh 'echo ===============Start maven build execution======================='
                         sh 'echo ${jmeterSlaveNodes}'
-//    Project On-board TASK 6::
-//                         Project maven build command have to define like below passing all the required custom parameters
-//                         sh '''mvn clean install -DjenkinsSlaveNodes=${jmeterSlaveNodes} -DscriptName=${scriptName} -Dprotocol=${protocol} -DserverIP=${serverIP} \
-//                                                      -DpUserData=${pUserData} -DpICThreadCount=${pICThreadCount} -DpICRampupTime=${pICRampupTime} -DpICStepCount=${pICStepCount} \
-//                                                      -DpICDuration=${pICDuration} -DpVCThreadCount=${pVCThreadCount} -DpVCRampupTime=${pVCRampupTime} -DpVCStepCount=${pVCStepCount} \
-//                                                      -DpVCDuration=${pVCDuration} -DpThinktime=${pThinktime} -Dsyy_itm_vnd_ui_master=${syy_itm_vnd_ui_master} -DloginWebUI=${loginWebUI} \
-//                                                      -Dcframeworkservice=${cframeworkservice} -DpPacing=${pPacing} -Dsyy_itm_vnd_ui_master_approve=${syy_itm_vnd_ui_master_approve}  \
-//                                                      -Dhost=${host} -DGenerated_Vendor_Namep=${Generated_Vendor_Namep} -DSTEP_ID=${STEP_ID} \
-//                                                      -Dprojectbuild=${projectbuild} -Dprojectbuildversion=${projectbuildversion}'''
                         sh '''mvn clean install -DjmeterSlaveNodes=${jmeterSlaveNodes} -DscriptName=${scriptName}'''
-//                         sh 'sleep 20m'
                         sh 'echo ===============Finishing maven build execution======================='
                     }
                 }
