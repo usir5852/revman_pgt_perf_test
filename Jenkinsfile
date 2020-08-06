@@ -25,16 +25,16 @@ pipeline {
     }
 
     stages {
-             stage('Get Jenkins Slave Name) {
-                                steps {
-                                    container('kubehelm'){
-                                        script{
-                                              print "=================Get Jenkins Slave Name====================="
-                                              println("IP Details: ${env.NODE_NAME}")
-                                              print "===================Finishing Get Jenkins Slave Name==================="
-                                        }
-                                    }
-                                }
+             stage('Get Jenkins Slave Name') {
+                   steps {
+                        container('kubehelm'){
+                             script{
+                                  print "=================Get Jenkins Slave Name====================="
+                                  println("IP Details: ${env.NODE_NAME}")
+                                  print "===================Finishing Get Jenkins Slave Name==================="
+                              }
+                        }
+                   }
              }
 
             stage('file input') {
@@ -53,7 +53,7 @@ pipeline {
             }
 
             stage('Deploy JMeter Slaves') {
-                   steps {
+                  steps {
                         container('kubehelm'){
                               sh 'echo =======================Start deploy JMeter Slaves==============='
 //                            sh 'helm init --client-only'
@@ -64,7 +64,7 @@ pipeline {
                               sh 'kubectl wait --for=condition=ready pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} --timeout=90s'
                               sh 'echo =======================Finishing deploy JMeter Slaves==============='
                         }
-                    }
+                   }
             }
             stage('Get JMeter SlaveNodes IP details') {
                     steps {
