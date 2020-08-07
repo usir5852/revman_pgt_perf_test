@@ -22,8 +22,11 @@ pipeline {
                               sh 'echo =======================Start deploy JMeter Slaves==============='
                               sh 'helm install --wait custom/jmeter-slave --name distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -f perfPlatform/JMeter-Slave-Pod-Values.yaml'
                               sh 'kubectl wait --for=condition=ready pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} --timeout=90s'
-                              sh 'env.jmeterSlaveNodes = sh(returnStdout: true, script:'kubectl get pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o jsonpath=\'{.items[*].status.podIP}\' | tr \' \' \',\'')'
-                              sh 'echo IP Details:  ${env.jmeterSlaveNodesIPList}'
+                              script{
+                                env.jmeterSlaveNodes = sh(returnStdout: true, script:'kubectl get pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o jsonpath=\'{.items[*].status.podIP}\' | tr \' \' \',\'')
+                                println("IP Details: ${env.jenkinsSlaveNodes}")
+                              }
+
                               sh 'echo =======================Finishing deploy JMeter Slaves==============='
                         }
                    }
