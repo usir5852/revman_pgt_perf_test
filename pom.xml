@@ -50,22 +50,13 @@
                     <remoteConfig>
                         <startServersBeforeTests>true</startServersBeforeTests>
 <!--                        <stopServersAfterTests>true</stopServersAfterTests>-->
-                        <serverList>${jmeterSlaveNodes}</serverList>
+                        <serverList>${jmeterSlaveNodesIPList}</serverList>
                     </remoteConfig>
                     <propertiesJMeter>
                         <client.rmi.localport>1099</client.rmi.localport>
                         <https.socket.protocols>TLSv1.2</https.socket.protocols>
                     </propertiesJMeter>
                     <propertiesGlobal>
-<!--
-        Define your project custom variables need pass to the JMeter script
-                        <serverURL>${serverURL}</serverURL>
-                        <serverPortHTTP>${serverPortHTTP}</serverPortHTTP>
-                        <serverPortHTTPS>${serverPortHTTPS}</serverPortHTTPS>
-                        <apiServerURL>${apiServerURL}</apiServerURL>
-                        <pThinktime>${pThinktime}</pThinktime>
-
--->
                     </propertiesGlobal>
                     <propertiesUser>
                         <server.rmi.ssl.disable>true</server.rmi.ssl.disable>
@@ -73,9 +64,6 @@
                     </propertiesUser>
 
                     <propertiesFilesDirectory>src/test/property</propertiesFilesDirectory>
-<!--                    <customPropertiesFiles>-->
-<!--                        <file>src/property/test.properties</file>-->
-<!--                    </customPropertiesFiles>-->
 
                     <jmeterExtensions>
                         <artifact>kg.apc:jmeter-plugins-extras:1.4.0</artifact>
