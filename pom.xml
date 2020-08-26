@@ -8,13 +8,10 @@
     <artifactId>jmeter-dynamic-instances-poc</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-
     <name>jmeter-dynamic-instances-poc</name>
     <url>http://maven.apache.org</url>
-
     <dependencies>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -67,7 +64,8 @@
                         <serverPortHTTPS>${serverPortHTTPS}</serverPortHTTPS>
                         <apiServerURL>${apiServerURL}</apiServerURL>
                         <pThinktime>${pThinktime}</pThinktime>
-                    -->
+
+-->
                     </propertiesGlobal>
                     <propertiesUser>
                         <server.rmi.ssl.disable>true</server.rmi.ssl.disable>
