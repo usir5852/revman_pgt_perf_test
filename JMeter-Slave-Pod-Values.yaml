@@ -10,7 +10,7 @@ pod:
 # JMeter Slave POD resource configuration
 resources:
     limits:
-      cpu: 1000m
+      cpu: 700m
       memory: 2560Mi
     requests:
       cpu: 500m
@@ -20,7 +20,7 @@ resources:
 image:
   repository: sysco/jmeter-plugins-slave
   tag: 5.1.1
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 
 # JMeter JVM memory configuration

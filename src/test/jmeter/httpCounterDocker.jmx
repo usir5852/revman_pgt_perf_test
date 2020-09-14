@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.3">
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -213,11 +213,11 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="-2032751019">
+          <collectionProp name="-1658890792">
             <stringProp name="1567">10</stringProp>
             <stringProp name="52">4</stringProp>
             <stringProp name="1567">10</stringProp>
-            <stringProp name="1722">60</stringProp>
+            <stringProp name="53430">600</stringProp>
             <stringProp name="10">10</stringProp>
           </collectionProp>
         </collectionProp>
