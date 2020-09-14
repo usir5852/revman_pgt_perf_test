@@ -5,12 +5,12 @@
 # POD related configuration
 pod:
   # The number of JMete slave pods required
-  replicaCount: 2
+  replicaCount: 1
 
 # JMeter Slave POD resource configuration
 resources:
     limits:
-      cpu: 1000m
+      cpu: 700m
       memory: 2560Mi
     requests:
       cpu: 500m
@@ -18,7 +18,7 @@ resources:
 
 # POD image configuration
 image:
-  repository: "gvasanka/jmeter-plugins-slave-extended-log"
+  repository: sysco/jmeter-plugins-slave
   tag: 5.1.1
   pullPolicy: IfNotPresent
 
