@@ -32,10 +32,10 @@ spec:
       resources:
         requests:
           memory: 128Mi
-          cpu: 150m
+          cpu: 100m
         limits:
-          memory: 320Mi
-          cpu: 200m
+          memory: 160Mi
+          cpu: 125m
       volumeMounts:
         - mountPath: /root/.helm
           name: helm-volume
