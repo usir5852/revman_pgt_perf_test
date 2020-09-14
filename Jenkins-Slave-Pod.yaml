@@ -19,7 +19,7 @@ spec:
           memory: 1536Mi
           cpu: 400m
         limits:
-          memory: 1664Mi
+          memory: 1920Mi
           cpu: 500m
       volumeMounts:
         - mountPath: /root/.m2
