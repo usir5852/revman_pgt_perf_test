@@ -8,6 +8,8 @@ metadata:
     jenkins-label: jenkins-slave
 spec:
   serviceAccountName: jenkins-release
+  imagePullSecrets:
+    - name: dockerregcred
   containers:
     - name: distributed-jmeter-master
       image: maven:alpine
