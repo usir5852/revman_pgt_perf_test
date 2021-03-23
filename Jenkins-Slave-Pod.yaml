@@ -4,8 +4,8 @@ metadata:
   annotations:
     cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
   labels:
-    jmeter-label: jmeter-master
-    jenkins-label: jenkins-slave
+    jmeter-master-label: jmeter-master
+    jenkins-slave-label: jenkins-slave
 spec:
   serviceAccountName: jenkins-release
   imagePullSecrets:
