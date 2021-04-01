@@ -1,60 +1,42 @@
-
 pipeline {
     agent {
             kubernetes {
-                  yamlFile 'Jenkins-Slave-Pod.yaml'  // path to the pod definition relative to the root of our project
+                  yamlFile 'perfPlatform/Jenkins-Slave-Pod.yaml'  // path to the jenkins slave pod definition relative to the root of our project
              }
     }
 
     environment {
-//    Project On-board TASK 1::
+//   Project On-board TASK 1::
 //          Preferred project name can be given here as JOBNAME, But make sure to use only lower case letters (a-z) and digits (0-9) on your names. Ex brakes1
 //          Restriction comes from Kubernetes side, Kubernetes only allow digits (0-9), lower case letters (a-z), -, and . characters in resource names https://kubernetes.io/docs/concepts/overview/working-with-objects/names/
-            JOBNAME = "jmeterdynamic"
-    }
-
-    parameters {
-//    Project On-board TASK 2::
-//          All the project related custom parameters should be define under here
-        string(defaultValue: "httpCounterDocker", description: 'custom param description?', name: 'scriptName')
+            JOBNAME = "leansolutiondemo"
+//   Project On-board TASK 2::
+//          Provide JMeter script name you want to run here. Don't add .jmx extension
+            scriptName = "httpCounterDocker"
     }
 
     stages {
             stage('Deploy JMeter Slaves') {
-                   steps {
+                  steps {
                         container('kubehelm'){
                               sh 'echo =======================Start deploy JMeter Slaves==============='
-//                            sh 'helm init --client-only'
-//                            sh 'helm repo add custom https://gvasanka.github.io/jmeter-helm-chart'
-//                            sh 'helm repo update'
-                              sh 'helm install --wait custom/jmeter-slave --name distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -f JMeter-Slave-Pod-Values.yaml'
-//                               sh 'helm install --wait stable/distributed-jmeter --name distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} --set server.replicaCount=${noOfSlaveNodes},master.replicaCount=0,image.repository=gvasanka/jmeter-plugins,image.tag=5.1.1'
+                              sh 'helm install --wait custom/jmeter-slave --name distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -f perfPlatform/JMeter-Slave-Pod-Values.yaml'
                               sh 'kubectl wait --for=condition=ready pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} --timeout=90s'
+                              script{
+                                env.jmeterSlaveNodesIPList = sh(returnStdout: true, script:'kubectl get pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o jsonpath=\'{.items[*].status.podIP}\' | tr \' \' \',\'')
+                                println("IP Details: ${env.jmeterSlaveNodesIPList}")
+                              }
+
                               sh 'echo =======================Finishing deploy JMeter Slaves==============='
                         }
-                    }
+                   }
             }
-            stage('Search Slave IP details') {
-                    steps {
-                        container('kubehelm'){
-                            script{
-                                  print "=================Start search for slave IP details====================="
-                                  print "Searching for Jmeter Slave IPs"
-                                  env.jenkinsSlaveNodes = sh(returnStdout: true, script:'kubectl get pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o jsonpath=\'{.items[*].status.podIP}\' | tr \' \' \',\'')
-                                  println("IP Details: ${env.jenkinsSlaveNodes}")
-                                  print "===================Finishing search for slave IP details==================="
-                            }
-                        }
-                    }
-            }
-            stage('Copying data files to JMeter Slaves') {
+            stage('Copying test data files to JMeter Slaves') {
                 steps {
                     container('kubehelm'){
                         sh 'echo ===============Start copying data files======================='
                         sh 'pwd'
-//    Project On-board TASK 3::
-//    Following script copy the JMeter test data files to JMeter slaves, so make sure data file locations defined correctly, If you followed standard project structure nothing to change here.
-                        sh 'for pod in $(kubectl get pod -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o custom-columns=:metadata.name); do kubectl cp src/test/data/ $pod:/opt/perf-test-data/;done;'
+                        sh 'for pod in $(kubectl get pod -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o custom-columns=:metadata.name); do kubectl cp src/test/testdata/ $pod:/opt/perf-test-data/;done;'
                         sh 'echo ===============Finishing copying data files======================='
                     }
                 }
@@ -63,33 +45,26 @@ pipeline {
                 steps {
                     container('distributed-jmeter-master'){
                         sh 'echo ===============Start maven build execution======================='
-                        sh 'echo ${jenkinsSlaveNodes}'
-//    Project On-board TASK 4::
-//                         Project maven build command have to define like below passing all the required custom parameters
-//                         sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -Dprotocol=${protocol} -DserverIP=${serverIP} \
-//                                                      -DpUserData=${pUserData} -DpICThreadCount=${pICThreadCount} -DpICRampupTime=${pICRampupTime} -DpICStepCount=${pICStepCount} \
-//                                                      -DpICDuration=${pICDuration} -DpVCThreadCount=${pVCThreadCount} -DpVCRampupTime=${pVCRampupTime} -DpVCStepCount=${pVCStepCount} \
-//                                                      -DpVCDuration=${pVCDuration} -DpThinktime=${pThinktime} -Dsyy_itm_vnd_ui_master=${syy_itm_vnd_ui_master} -DloginWebUI=${loginWebUI} \
-//                                                      -Dcframeworkservice=${cframeworkservice} -DpPacing=${pPacing} -Dsyy_itm_vnd_ui_master_approve=${syy_itm_vnd_ui_master_approve}  \
-//                                                      -Dhost=${host} -DGenerated_Vendor_Namep=${Generated_Vendor_Namep} -DSTEP_ID=${STEP_ID} \
-//                                                      -Dprojectbuild=${projectbuild} -Dprojectbuildversion=${projectbuildversion}'''
-                        sh '''mvn clean install -DjenkinsSlaveNodes=${jenkinsSlaveNodes} -DscriptName=${scriptName}'''
+                        sh 'echo ${jmeterSlaveNodesIPList}'
+                        sh 'mvn clean install -DjmeterSlaveNodesIPList=${jmeterSlaveNodesIPList} -DscriptName=${scriptName}'
                         sh 'echo ===============Finishing maven build execution======================='
                     }
                 }
             }
             stage('Read Performance Test Results') {
                 steps {
-                    sh 'echo ===============Start read Performance Test Results======================='
-                    sh 'pwd'
-                    perfReport 'target/jmeter/results/*.csv'
-                    sh 'echo ===============Finishing Performance Test Results======================='
+                    container('distributed-jmeter-master'){
+                        sh 'echo ===============Start read Performance Test Results======================='
+                        sh 'pwd'
+                        perfReport 'target/jmeter/results/*.csv'
+                        sh 'echo ===============Finishing Performance Test Results======================='
+                    }
                 }
             }
             stage('Erase JMeter Slaves') {
                       steps {
                             container('kubehelm'){
-//                                  sh 'sleep 30m'    // In case want to backup some files from jmeter slave machines, talk to perf team and add a sleep as here
+//                               sh 'sleep 30m'    // Add a sleep, In case want to backup some files from Jenkins slave workspace machines after test completion
                                  sh 'echo ==============Start Erasing JMeter Slaves========================'
                                  sh 'helm delete --purge distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER}'
                                  sh 'kubectl wait --for=delete pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} --timeout=90s'

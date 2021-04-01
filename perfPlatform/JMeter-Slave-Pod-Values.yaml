@@ -9,17 +9,17 @@ pod:
 
 # JMeter Slave POD resource configuration
 resources:
-    limits:
-      cpu: 700m
-      memory: 2560Mi
-    requests:
-      cpu: 500m
-      memory: 2048Mi
+  limits:
+    cpu: 1000m
+    memory: 4096Mi
+  requests:
+    cpu: 1000m
+    memory: 4096Mi
 
 # POD image configuration
 image:
-  repository: sysco/jmeter-plugins-slave
-  tag: 5.1.1
+  repository: "sysco/jmeter-plugins-slave-extended-log"
+  tag: 5.3.0
   pullPolicy: IfNotPresent
 
 
@@ -27,7 +27,7 @@ image:
 jmeter:
   xms:
     #  Xms<size>        set initial Java heap size
-    memory: 1536M
+    memory: 3072M
   xmx:
     #  Xmx<size>        set maximum Java heap size
-    memory: 2048M
+    memory: 3584M

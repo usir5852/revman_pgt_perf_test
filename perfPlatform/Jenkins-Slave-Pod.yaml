@@ -18,8 +18,8 @@ spec:
       tty: true
       resources:
         requests:
-          memory: 1536Mi
-          cpu: 400m
+          memory: 1920Mi
+          cpu: 500m
         limits:
           memory: 1920Mi
           cpu: 500m
@@ -36,8 +36,8 @@ spec:
           memory: 128Mi
           cpu: 100m
         limits:
-          memory: 160Mi
-          cpu: 125m
+          memory: 128Mi
+          cpu: 100m
       volumeMounts:
         - mountPath: /root/.helm
           name: helm-volume
