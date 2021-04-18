@@ -40,11 +40,11 @@ spec:
           cpu: 100m
       volumeMounts:
         - mountPath: /root/.helm
-          name: helm-volume
+          name: helm3-volume
   volumes:
     - name: m2-volume
       persistentVolumeClaim:
         claimName: maven-efs-pv-claim
-    - name: helm-volume
+    - name: helm3-volume
       persistentVolumeClaim:
-        claimName: helm-efs-pv-claim
+        claimName: helm3-efs-pv-claim
