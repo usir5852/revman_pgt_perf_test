@@ -27,7 +27,7 @@ spec:
         - mountPath: /root/.m2
           name: m2-volume
     - name: kubehelm
-      image: dtzar/helm-kubectl:2.14.3
+      image: dtzar/helm-kubectl:3.4.2
       command:
         - cat
       tty: true
@@ -39,12 +39,22 @@ spec:
           memory: 128Mi
           cpu: 100m
       volumeMounts:
-        - mountPath: /root/.helm
-          name: helm-volume
+        - mountPath: /root/.cache/helm
+          name: helm3-cache
+        - mountPath: /root/.config/helm
+          name: helm3-config
+        - mountPath: /root/.local/share/helm
+          name: helm3-data
   volumes:
     - name: m2-volume
       persistentVolumeClaim:
         claimName: maven-efs-pv-claim
-    - name: helm-volume
+    - name: helm3-cache
       persistentVolumeClaim:
-        claimName: helm-efs-pv-claim
+        claimName: helm3-cache-efs-pv-claim
+    - name: helm3-config
+      persistentVolumeClaim:
+        claimName: helm3-config-efs-pv-claim
+    - name: helm3-data
+      persistentVolumeClaim:
+        claimName: helm3-data-efs-pv-claim
