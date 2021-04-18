@@ -42,9 +42,9 @@ spec:
         - mountPath: /root/.cache/helm
           name: helm3-cache
         - mountPath: /root/.config/helm
-            name: helm3-config
+          name: helm3-config
         - mountPath: /root/.local/share/helm
-            name: helm3-data
+          name: helm3-data
   volumes:
     - name: m2-volume
       persistentVolumeClaim:
@@ -53,8 +53,8 @@ spec:
       persistentVolumeClaim:
         claimName: helm3-cache-efs-pv-claim
     - name: helm3-config
-        persistentVolumeClaim:
-          claimName: helm3-config-efs-pv-claim
+      persistentVolumeClaim:
+        claimName: helm3-config-efs-pv-claim
     - name: helm3-data
-        persistentVolumeClaim:
-          claimName: helm3-data-efs-pv-claim
+      persistentVolumeClaim:
+        claimName: helm3-data-efs-pv-claim
