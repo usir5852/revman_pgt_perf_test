@@ -1,4 +1,4 @@
-**JMeter dynamic instance POC**
+**qPerf Base Project**
 
 This repository provides the base project structure which can be used to jump start onboarding your project to use Performance Execution platform.
 
