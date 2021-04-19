@@ -1,7 +1,7 @@
 pipeline {
     agent {
             kubernetes {
-                  yamlFile 'perfPlatform/Jenkins-Slave-Pod.yaml'  // path to the jenkins slave pod definition relative to the root of our project
+                  yamlFile 'Jenkins-Slave-Pod.yaml'  // path to the jenkins slave pod definition relative to the root of our project
              }
     }
 
@@ -20,7 +20,7 @@ pipeline {
                   steps {
                         container('kubehelm'){
                               sh 'echo =======================Start deploy JMeter Slaves==============='
-                              sh 'helm install --wait distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} jmeter-helm/jmeter-slave -f perfPlatform/JMeter-Slave-Pod-Values.yaml'
+                              sh 'helm install --wait distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} jmeter-helm/jmeter-slave -f JMeter-Slave-Pod-Values.yaml'
                               sh 'kubectl wait --for=condition=ready pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} --timeout=90s'
                               script{
                                 env.jmeterSlaveNodesIPList = sh(returnStdout: true, script:'kubectl get pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o jsonpath=\'{.items[*].status.podIP}\' | tr \' \' \',\'')
