@@ -3,7 +3,7 @@
 This repository provides the base project structure which can be used to jump start onboarding your project to use Performance Execution platform.
 
 Please refer below link for new project onbording steps and guidelines
-[How to Guide](https://syscobt.atlassian.net/wiki/spaces/TQATeam/pages/1117685646/How+To+Onboard+your+performance+test+project+to+new+on-demand+performance+environment "How to Guide")
+[How to Guide](https://syscobt.atlassian.net/wiki/spaces/TQATeam/pages/1630275022/How+To+Onboard+your+performance+test+project+on+the+Sysco+performance+platform+qPerf "How to Guide")
 
 
 Performance execution platform architecure diagram
