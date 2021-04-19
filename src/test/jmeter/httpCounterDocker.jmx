@@ -466,12 +466,12 @@
               </elementProp>
               <elementProp name="influxdbUrl" elementType="Argument">
                 <stringProp name="Argument.name">influxdbUrl</stringProp>
-                <stringProp name="Argument.value">https://perfplatform.cloud.sysco.net/write?db=jmeter2</stringProp>
+                <stringProp name="Argument.value">https://perfplatform.cloud.sysco.net/write?db=jmeter</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="application" elementType="Argument">
                 <stringProp name="Argument.name">application</stringProp>
-                <stringProp name="Argument.value">LeanDemo6</stringProp>
+                <stringProp name="Argument.value">qPerfBaseProjectMaster</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="measurement" elementType="Argument">
