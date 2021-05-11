@@ -20,9 +20,6 @@ pipeline {
                   steps {
                         container('kubehelm'){
                               sh 'echo =======================Start deploy JMeter Slaves==============='
-                              sh 'helm repo add jmeter-helm https://gvasanka.github.io/jmeter-helm-chart'
-                              sh 'helm repo update'
-                              sh 'sleep 10m'
                               sh 'helm install --wait distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} jmeter-helm/jmeter-slave -f perfPlatform/JMeter-Slave-Pod-Values.yaml'
                               sh 'kubectl wait --for=condition=ready pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} --timeout=90s'
                               script{
