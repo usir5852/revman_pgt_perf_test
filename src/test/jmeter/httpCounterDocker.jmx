@@ -20,12 +20,12 @@
           </elementProp>
           <elementProp name="threadCount" elementType="Argument">
             <stringProp name="Argument.name">threadCount</stringProp>
-            <stringProp name="Argument.value">${__P(threadCount,10)}</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount,5)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="holdTime" elementType="Argument">
             <stringProp name="Argument.name">holdTime</stringProp>
-            <stringProp name="Argument.value">${__P(holdTime,3600)}</stringProp>
+            <stringProp name="Argument.value">${__P(holdTime,5)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -234,12 +234,12 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Ultimate Thread Group -Demo API Invoke" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1478609679">
+          <collectionProp name="1475234021">
             <stringProp name="472454735">${threadCount}</stringProp>
             <stringProp name="52">4</stringProp>
-            <stringProp name="1598">20</stringProp>
+            <stringProp name="1567">10</stringProp>
             <stringProp name="-1770471718">${holdTime}</stringProp>
-            <stringProp name="1598">20</stringProp>
+            <stringProp name="1567">10</stringProp>
           </collectionProp>
         </collectionProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
