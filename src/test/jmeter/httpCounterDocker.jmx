@@ -25,7 +25,7 @@
           </elementProp>
           <elementProp name="holdTime" elementType="Argument">
             <stringProp name="Argument.name">holdTime</stringProp>
-            <stringProp name="Argument.value">${__P(holdTime,60)}</stringProp>
+            <stringProp name="Argument.value">${__P(holdTime,3600)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
