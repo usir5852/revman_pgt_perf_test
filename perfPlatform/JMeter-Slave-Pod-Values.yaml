@@ -18,8 +18,8 @@ resources:
 
 # POD image configuration
 image:
-  repository: "sysco/jmeter-plugins-slave-extended-log"
-  tag: 5.3.0
+  repository: "sysco/jmeter-plugins-slave"
+  tag: 5.4.3-light
   pullPolicy: IfNotPresent
 
 
