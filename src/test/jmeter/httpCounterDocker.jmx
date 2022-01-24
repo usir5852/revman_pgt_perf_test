@@ -234,12 +234,12 @@
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Ultimate Thread Group -Demo API Invoke" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1419332423">
+          <collectionProp name="1475234021">
             <stringProp name="472454735">${threadCount}</stringProp>
             <stringProp name="52">4</stringProp>
             <stringProp name="1567">10</stringProp>
             <stringProp name="-1770471718">${holdTime}</stringProp>
-            <stringProp name="10">10</stringProp>
+            <stringProp name="1567">10</stringProp>
           </collectionProp>
         </collectionProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
