@@ -28,9 +28,9 @@
             <stringProp name="Argument.value">${__P(holdTime,5)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="filepath" elementType="Argument">
-            <stringProp name="Argument.name">filepath</stringProp>
-            <stringProp name="Argument.value">/opt/perf-test-data</stringProp>
+          <elementProp name="fileDirectory" elementType="Argument">
+            <stringProp name="Argument.name">fileDirectory</stringProp>
+            <stringProp name="Argument.value">/opt/perf-test-result</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
