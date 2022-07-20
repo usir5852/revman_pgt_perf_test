@@ -30,7 +30,7 @@
           </elementProp>
           <elementProp name="filepath" elementType="Argument">
             <stringProp name="Argument.name">filepath</stringProp>
-            <stringProp name="Argument.value">/opt/perf-test-data/result</stringProp>
+            <stringProp name="Argument.value">/opt/perf-test-data</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>

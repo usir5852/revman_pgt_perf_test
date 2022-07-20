@@ -66,7 +66,7 @@ pipeline {
                             container('kubehelm'){
                                  sh 'echo ==============Start JMeter result backup========================'
                                  sh 'pwd'
-                                 sh 'for pod in $(kubectl get pod -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o custom-columns=:metadata.name); do kubectl cp $pod:/opt/perf-test-data/result /root/testefs/${JOBNAME}/${BUILD_NUMBER}/ ;done;'
+                                 sh 'for pod in $(kubectl get pod -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o custom-columns=:metadata.name); do kubectl cp $pod:/opt/perf-test-data/ /root/testefs/${JOBNAME}/${BUILD_NUMBER}/ ;done;'
                                  sh 'echo ==============Finished JMeter result backup========================'
 
 
