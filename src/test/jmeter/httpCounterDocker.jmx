@@ -318,6 +318,30 @@
               <intProp name="Assertion.test_type">2</intProp>
             </ResponseAssertion>
             <hashTree/>
+            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="script">import java.text.*;
+import java.io.*;
+import java.util.*;
+import java.text.SimpleDateFormat;
+
+
+String Orderdate1 = (new SimpleDateFormat(&quot;yyyy-MM-dd hh:mm:ss&quot;)).format(new Date());
+filepath =vars.get(&quot;fileDirectory&quot;);
+
+
+
+f = new FileOutputStream(filepath+&quot;/ABCTransaction.csv&quot;, true);
+p = new PrintStream(f);
+this.interpreter.setOut(p);
+
+print(&quot;ABC Transaction ---Dummy Data&quot;);
+f.close();
+</stringProp>
+            </BeanShellPostProcessor>
+            <hashTree/>
           </hashTree>
         </hashTree>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="DEF Transaction" enabled="true">
@@ -384,12 +408,11 @@
               <intProp name="Assertion.test_type">2</intProp>
             </ResponseAssertion>
             <hashTree/>
-          </hashTree>
-          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
-            <boolProp name="resetInterpreter">false</boolProp>
-            <stringProp name="parameters"></stringProp>
-            <stringProp name="filename"></stringProp>
-            <stringProp name="script">import java.text.*;
+            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="script">import java.text.*;
 import java.io.*;
 import java.util.*;
 import java.text.SimpleDateFormat;
@@ -400,15 +423,16 @@ filepath =vars.get(&quot;fileDirectory&quot;);
 
 
 
-f = new FileOutputStream(filepath+&quot;/OrderPredictive.csv&quot;, true);
+f = new FileOutputStream(filepath+&quot;/DEFTransaction.csv&quot;, true);
 p = new PrintStream(f);
 this.interpreter.setOut(p);
 
-print(&quot;Some Dummy Data&quot;);
+print(&quot;DEF Transaction ---Some Dummy Data&quot;);
 f.close();
 </stringProp>
-          </BeanShellPostProcessor>
-          <hashTree/>
+            </BeanShellPostProcessor>
+            <hashTree/>
+          </hashTree>
         </hashTree>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config -Dummy file read - File Path should be /opt/perf-test-data/filename.csv" enabled="false">
           <stringProp name="delimiter">,</stringProp>
