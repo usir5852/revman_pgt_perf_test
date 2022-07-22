@@ -30,7 +30,7 @@
           </elementProp>
           <elementProp name="fileDirectory" elementType="Argument">
             <stringProp name="Argument.name">fileDirectory</stringProp>
-            <stringProp name="Argument.value">/opt/perf-test-result</stringProp>
+            <stringProp name="Argument.value">/opt/perf-test-data</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -337,7 +337,7 @@ f = new FileOutputStream(filepath+&quot;/ABCTransaction.csv&quot;, true);
 p = new PrintStream(f);
 this.interpreter.setOut(p);
 
-print(&quot;ABC Transaction ---Dummy Data&quot;);
+print(Orderdate1 +&quot; ABC Transaction ---Dummy Data&quot;);
 f.close();
 </stringProp>
             </BeanShellPostProcessor>
@@ -427,7 +427,7 @@ f = new FileOutputStream(filepath+&quot;/DEFTransaction.csv&quot;, true);
 p = new PrintStream(f);
 this.interpreter.setOut(p);
 
-print(&quot;DEF Transaction ---Some Dummy Data&quot;);
+print(Orderdate1 +&quot; DEF Transaction ---Some Dummy Data&quot;);
 f.close();
 </stringProp>
             </BeanShellPostProcessor>
