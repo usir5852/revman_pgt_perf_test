@@ -64,16 +64,14 @@ pipeline {
             stage('Erase JMeter Slaves') {
                       steps {
                             container('kubehelm'){
-                                 sh 'echo ==============Start Custom JMeter result backup========================'
+                                 sh 'echo ==============Start JMeter result backup Process ========================'
                                  sh 'pwd'
-                                 sh 'for pod in $(kubectl get pod -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o custom-columns=:metadata.name); do kubectl cp $pod:/opt/perf-test-data/ /root/testefs/${JOBNAME}/${BUILD_NUMBER}/$pod/ ;done;'
-                                 sh 'echo ==============Finished Custom JMeter result backup========================'
+                                 sh 'for pod in $(kubectl get pod -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o custom-columns=:metadata.name); do kubectl cp $pod:/opt/perf-test-data/ /root/jmetertestresults/${JOBNAME}/${BUILD_NUMBER}/$pod/ ;done;'
+                                 sh 'for pod in $(kubectl get pod -l app.kubernetes.io/component=jenkins-master -o custom-columns=:metadata.name); do kubectl cp $pod:/var/jenkins_home/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/performance-reports/JMeterCSV/ /root/jmetertestresults/${JOBNAME}/${BUILD_NUMBER}/ ;done;'
+                                 sh 'echo ==============Finished JMeter result backup Process ========================'
 
-                                 sh 'echo ==============Start JMeter result backup========================'
-                                 sh 'for pod in $(kubectl get pod -l app.kubernetes.io/component=jenkins-master -o custom-columns=:metadata.name); do kubectl cp $pod:/var/jenkins_home/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/performance-reports/JMeterCSV/ /root/testefs/${JOBNAME}/${BUILD_NUMBER}/ ;done;'
-                                 sh 'echo ==============Finished Custom JMeter result backup========================'
+                                // sh 'sleep 30m'    // Add a sleep, In case want to backup some files from Jenkins slave workspace machines after test completion
 
-                                 sh 'sleep 30m'    // Add a sleep, In case want to backup some files from Jenkins slave workspace machines after test completion
                                  sh 'echo ==============Start Erasing JMeter Slaves========================'
                                  sh 'helm uninstall distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER}'
                                  sh 'kubectl wait --for=delete pods -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} --timeout=90s'

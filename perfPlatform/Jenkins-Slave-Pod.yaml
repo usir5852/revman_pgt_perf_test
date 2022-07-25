@@ -45,7 +45,7 @@ spec:
           name: helm3-config
         - mountPath: /root/.local/share/helm
           name: helm3-data
-        - mountPath: /root/testefs
+        - mountPath: /root/jmetertestresults
           name: efs-claim-test-data
   volumes:
     - name: m2-volume
