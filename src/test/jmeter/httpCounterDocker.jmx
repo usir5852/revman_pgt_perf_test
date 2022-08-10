@@ -28,6 +28,11 @@
             <stringProp name="Argument.value">${__P(holdTime,5)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="fileDirectory" elementType="Argument">
+            <stringProp name="Argument.name">fileDirectory</stringProp>
+            <stringProp name="Argument.value">/opt/perf-test-data</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
@@ -313,6 +318,30 @@
               <intProp name="Assertion.test_type">2</intProp>
             </ResponseAssertion>
             <hashTree/>
+            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="script">import java.text.*;
+import java.io.*;
+import java.util.*;
+import java.text.SimpleDateFormat;
+
+
+String Orderdate1 = (new SimpleDateFormat(&quot;yyyy-MM-dd hh:mm:ss&quot;)).format(new Date());
+filepath =vars.get(&quot;fileDirectory&quot;);
+
+
+
+f = new FileOutputStream(filepath+&quot;/ABCTransaction.csv&quot;, true);
+p = new PrintStream(f);
+this.interpreter.setOut(p);
+
+print(Orderdate1 +&quot; ABC Transaction ---Dummy Data&quot;);
+f.close();
+</stringProp>
+            </BeanShellPostProcessor>
+            <hashTree/>
           </hashTree>
         </hashTree>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="DEF Transaction" enabled="true">
@@ -378,6 +407,30 @@
               <boolProp name="Assertion.assume_success">false</boolProp>
               <intProp name="Assertion.test_type">2</intProp>
             </ResponseAssertion>
+            <hashTree/>
+            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="script">import java.text.*;
+import java.io.*;
+import java.util.*;
+import java.text.SimpleDateFormat;
+
+
+String Orderdate1 = (new SimpleDateFormat(&quot;yyyy-MM-dd hh:mm:ss&quot;)).format(new Date());
+filepath =vars.get(&quot;fileDirectory&quot;);
+
+
+
+f = new FileOutputStream(filepath+&quot;/DEFTransaction.csv&quot;, true);
+p = new PrintStream(f);
+this.interpreter.setOut(p);
+
+print(Orderdate1 +&quot; DEF Transaction ---Some Dummy Data&quot;);
+f.close();
+</stringProp>
+            </BeanShellPostProcessor>
             <hashTree/>
           </hashTree>
         </hashTree>
@@ -582,7 +635,7 @@
               </elementProp>
               <elementProp name="application" elementType="Argument">
                 <stringProp name="Argument.name">application</stringProp>
-                <stringProp name="Argument.value">JMeterResults</stringProp>
+                <stringProp name="Argument.value">qPerfMaster</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="measurement" elementType="Argument">
