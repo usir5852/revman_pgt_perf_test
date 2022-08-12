@@ -46,7 +46,7 @@ spec:
         - mountPath: /root/.local/share/helm
           name: helm3-data
         - mountPath: /opt/results
-          name: efs-claim-test-data
+          name: file-server-data
   volumes:
     - name: m2-volume
       persistentVolumeClaim:
@@ -60,6 +60,6 @@ spec:
     - name: helm3-data
       persistentVolumeClaim:
         claimName: helm3-data-efs-pv-claim
-    - name: efs-claim-test-data
+    - name: file-server-data
       persistentVolumeClaim:
-        claimName: efs-claim-test
+        claimName: file-server-efs-pv-claim
