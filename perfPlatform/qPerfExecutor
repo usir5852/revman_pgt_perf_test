@@ -67,7 +67,7 @@ pipeline {
                                  sh 'echo ==============Start JMeter result backup Process ========================'
                                  sh 'pwd'
                                  sh 'for pod in $(kubectl get pod -l app.kubernetes.io/instance=distributed-jmeter-slave-${JOBNAME}-${BUILD_NUMBER} -o custom-columns=:metadata.name); do kubectl cp $pod:/opt/perf-test-data/ /opt/results/jenkins/${JOB_NAME}/${BUILD_NUMBER}/$pod/ ;done;'
-                                 sh 'for pod in $(kubectl get pod -l app.kubernetes.io/component=jenkins-master -o custom-columns=:metadata.name); do kubectl cp $pod:/var/jenkins_home/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/performance-reports/JMeterCSV/ /opt/results/jenkins/${JOB_NAME}/${BUILD_NUMBER}/ ;done;'
+                                 sh 'for pod in $(kubectl get pod -l app.kubernetes.io/component=jenkins-controller -o custom-columns=:metadata.name); do kubectl cp $pod:/var/jenkins_home/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/performance-reports/JMeterCSV/ /opt/results/jenkins/${JOB_NAME}/${BUILD_NUMBER}/ ;done;'
                                  sh 'echo ==============Finished JMeter result backup Process ========================'
 
                            //      sh 'sleep 10m'    // Add a sleep, In case want to backup some files from Jenkins slave workspace machines after test completion
