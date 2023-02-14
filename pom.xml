@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sysco.perfromance.engineering</groupId>
-    <artifactId>qPerfBaseProject</artifactId>
+    <artifactId>tqe-perf-eng-test-jenkins</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-    <name>qPerfBaseProject</name>
+    <name>tqe-perf-eng-test-jenkins</name>
     <url>http://maven.apache.org</url>
     <dependencies>
     </dependencies>
