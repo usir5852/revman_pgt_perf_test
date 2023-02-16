@@ -10,7 +10,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="apiProtocol" elementType="Argument">
             <stringProp name="Argument.name">apiProtocol</stringProp>
-            <stringProp name="Argument.value">${__P(apiProtocol,test)}</stringProp>
+            <stringProp name="Argument.value">${__P(apiProtocol,http)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="apiHostname" elementType="Argument">
