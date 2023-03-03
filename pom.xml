@@ -17,7 +17,7 @@
             <plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
                 <artifactId>jmeter-maven-plugin</artifactId>
-                <version>3.5.0</version>
+                <version>3.7.0</version>
                 <executions>
                     <execution>
                         <id>configuration</id>
@@ -41,7 +41,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <jmeterVersion>5.4.3</jmeterVersion>
+                    <jmeterVersion>5.5</jmeterVersion>
                     <jMeterProcessJVMSettings>
                         <xms>${xms.setting}</xms>
                         <xmx>${xmx.setting}</xmx>
@@ -88,6 +88,7 @@
                         <artifact>kg.apc:jmeter-plugins-graphs-basic:2.0</artifact>
                         <artifact>com.blazemeter:jmeter-parallel:0.11</artifact>
                         <artifact>com.blazemeter:jmeter-plugins-random-csv-data-set:0.8</artifact>
+                        <artifact>io.github.mderevyankoaqa:jmeter-plugins-influxdb2-listener:2.1</artifact>
                     </jmeterExtensions>
                     <!-- The plugin uses some broken dependencies
                          An alternative is to set this to true and use excludedArtifacts, see below
