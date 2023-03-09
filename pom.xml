@@ -78,17 +78,17 @@
                         <artifact>kg.apc:jmeter-plugins-casutg:2.10</artifact>
                         <artifact>kg.apc:jmeter-plugins-cmn-jmeter:0.7</artifact>
                         <artifact>kg.apc:jmeter-plugins-csvars:0.1</artifact>
-                        <artifact>kg.apc:jmeter-plugins-functions:2.1</artifact>
-                        <artifact>kg.apc:jmeter-plugins-manager:1.7</artifact>
+                        <artifact>kg.apc:jmeter-plugins-functions:2.2</artifact>
+                        <artifact>kg.apc:jmeter-plugins-manager:1.9</artifact>
                         <artifact>kg.apc:jmeter-plugins-perfmon:2.1</artifact>
                         <artifact>kg.apc:jmeter-plugins-prmctl:0.4</artifact>
                         <artifact>kg.apc:jmeter-plugins-tst:2.5</artifact>
-                        <artifact>kg.apc:jmeter-plugins-webdriver:3.3</artifact>
+                        <artifact>kg.apc:jmeter-plugins-webdriver:4.8.0</artifact>
                         <artifact>kg.apc:jmeter-plugins-dummy:0.4</artifact>
                         <artifact>kg.apc:jmeter-plugins-graphs-basic:2.0</artifact>
                         <artifact>com.blazemeter:jmeter-parallel:0.11</artifact>
                         <artifact>com.blazemeter:jmeter-plugins-random-csv-data-set:0.8</artifact>
-                        <artifact>io.github.mderevyankoaqa:jmeter-plugins-influxdb2-listener:2.1</artifact>
+                        <artifact>io.github.mderevyankoaqa:jmeter-plugins-influxdb2-listener:2.6</artifact>
                     </jmeterExtensions>
                     <!-- The plugin uses some broken dependencies
                          An alternative is to set this to true and use excludedArtifacts, see below
