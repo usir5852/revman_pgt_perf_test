@@ -18,8 +18,8 @@ resources:
 
 # POD image configuration
 image:
-  repository: "sysco/jmeter-slave-base"
-  tag: 5.5
+  repository: "sysco/jmeter-plugins-slave"
+  tag: 5.5-light
   pullPolicy: IfNotPresent
 
 
