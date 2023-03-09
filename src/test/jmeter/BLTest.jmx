@@ -453,7 +453,7 @@
             </elementProp>
             <elementProp name="influxDBURL" elementType="Argument">
               <stringProp name="Argument.name">influxDBURL</stringProp>
-              <stringProp name="Argument.value">https://perfplatform.cloud.sysco.net/influxdb2</stringProp>
+              <stringProp name="Argument.value">https://perfplatform.cloud.sysco.net</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="influxDBToken" elementType="Argument">
