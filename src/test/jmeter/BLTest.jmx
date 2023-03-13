@@ -433,7 +433,7 @@
         <stringProp name="classname">io.github.mderevyankoaqa.influxdb2.visualizer.InfluxDatabaseBackendListenerClient</stringProp>
       </BackendListener>
       <hashTree/>
-      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener qperf" enabled="true">
+      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
         <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="testName" elementType="Argument">
@@ -458,7 +458,7 @@
             </elementProp>
             <elementProp name="influxDBToken" elementType="Argument">
               <stringProp name="Argument.name">influxDBToken</stringProp>
-              <stringProp name="Argument.value">put token here</stringProp>
+              <stringProp name="Argument.value">mycXs5gMOMqJ39i8tOCSvH7zxMTthVp2KqycRmlzQp1o8xz7CN__YooMMjNvtFUGeeWa4L1MFP66hU4sNZenOQ==</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="influxDBOrganization" elementType="Argument">
@@ -514,7 +514,6 @@
           </collectionProp>
         </elementProp>
         <stringProp name="classname">io.github.mderevyankoaqa.influxdb2.visualizer.InfluxDatabaseBackendListenerClient</stringProp>
-        <stringProp name="TestPlan.comments">mycXs5gMOMqJ39i8tOCSvH7zxMTthVp2KqycRmlzQp1o8xz7CN__YooMMjNvtFUGeeWa4L1MFP66hU4sNZenOQ==</stringProp>
       </BackendListener>
       <hashTree/>
       <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="false">
