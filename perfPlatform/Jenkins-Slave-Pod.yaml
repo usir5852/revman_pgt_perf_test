@@ -12,7 +12,7 @@ spec:
     - name: dockerregcred
   containers:
     - name: distributed-jmeter-master
-      image: maven:alpine
+      image: maven:3.9.0-amazoncorretto-11
       command:
         - cat
       tty: true
