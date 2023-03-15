@@ -10,7 +10,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="BUILD_NUMBER" elementType="Argument">
             <stringProp name="Argument.name">BUILD_NUMBER</stringProp>
-            <stringProp name="Argument.value">${__P(BUILD_NUMBER)}</stringProp>
+            <stringProp name="Argument.value">${__P(BUILD_NUMBER,002)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
