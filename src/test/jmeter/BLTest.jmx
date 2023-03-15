@@ -14,9 +14,9 @@
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
-          <elementProp name="BUILD_NUMBER" elementType="Argument">
-            <stringProp name="Argument.name">BUILD_NUMBER</stringProp>
-            <stringProp name="Argument.value">${__P(BUILD_NUMBER,)}</stringProp>
+          <elementProp name="buildNo" elementType="Argument">
+            <stringProp name="Argument.name">buildNo</stringProp>
+            <stringProp name="Argument.value">${__P(buildNo,55)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -302,7 +302,7 @@
             </elementProp>
             <elementProp name="runId" elementType="Argument">
               <stringProp name="Argument.name">runId</stringProp>
-              <stringProp name="Argument.value">${BUILD_NUMBER}</stringProp>
+              <stringProp name="Argument.value">${buildNo}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="influxDBURL" elementType="Argument">

@@ -63,7 +63,7 @@
                         <https.socket.protocols>TLSv1.2</https.socket.protocols>
                     </propertiesJMeter>
                     <propertiesGlobal>
-                        <BUILD_NUMBER>${BUILD_NUMBER}</BUILD_NUMBER>
+                        <buildNo>${buildNo}</buildNo>
                     </propertiesGlobal>
                     <propertiesUser>
                         <server.rmi.ssl.disable>true</server.rmi.ssl.disable>
