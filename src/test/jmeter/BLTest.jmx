@@ -297,7 +297,7 @@
           <collectionProp name="Arguments.arguments">
             <elementProp name="testName" elementType="Argument">
               <stringProp name="Argument.name">testName</stringProp>
-              <stringProp name="Argument.value">Application4</stringProp>
+              <stringProp name="Argument.value">Application5</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="nodeName" elementType="Argument">
