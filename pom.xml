@@ -63,6 +63,7 @@
                         <https.socket.protocols>TLSv1.2</https.socket.protocols>
                     </propertiesJMeter>
                     <propertiesGlobal>
+                        <BUILD_NUMBER>${BUILD_NUMBER}</BUILD_NUMBER>
                     </propertiesGlobal>
                     <propertiesUser>
                         <server.rmi.ssl.disable>true</server.rmi.ssl.disable>
@@ -104,7 +105,6 @@
     <organization>
     </organization>
     <properties>
-        <BUILD_NUMBER>${BUILD_NUMBER}</BUILD_NUMBER>
         <perf.testplan>*</perf.testplan>
         <xms.setting>1024</xms.setting>
         <xmx.setting>1024</xmx.setting>
