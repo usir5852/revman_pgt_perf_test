@@ -46,7 +46,7 @@ pipeline {
                     container('distributed-jmeter-master'){
                         sh 'echo ===============Start maven build execution======================='
                         sh 'echo ${jmeterSlaveNodesIPList}'
-                        sh 'mvn clean install -DjmeterSlaveNodesIPList=${jmeterSlaveNodesIPList} -DscriptName=${scriptName} -GbuildNo=${BUILD_NUMBER}'
+                        sh 'mvn clean install -DjmeterSlaveNodesIPList=${jmeterSlaveNodesIPList} -DscriptName=${scriptName} -DbuildNo=${BUILD_NUMBER}'
                         sh 'echo ===============Finishing maven build execution======================='
                     }
                 }
