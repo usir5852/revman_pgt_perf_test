@@ -24,6 +24,11 @@
             <stringProp name="Argument.value">${__P(test1,77)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">${__P(env,qa)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
         <stringProp name="TestPlan.comments">871651</stringProp>
       </Arguments>
@@ -542,7 +547,7 @@
             </elementProp>
             <elementProp name="influxdbUrl" elementType="Argument">
               <stringProp name="Argument.name">influxdbUrl</stringProp>
-              <stringProp name="Argument.value">https://perfplatform.cloud.sysco.net/influx/api/v2/write?org=qperf&amp;bucket=qa</stringProp>
+              <stringProp name="Argument.value">https://perfplatform.cloud.sysco.net/influx/api/v2/write?org=qperf&amp;bucket=${env}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="application" elementType="Argument">
