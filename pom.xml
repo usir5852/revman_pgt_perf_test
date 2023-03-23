@@ -62,10 +62,8 @@
                         <client.rmi.localport>1099</client.rmi.localport>
                         <https.socket.protocols>TLSv1.2</https.socket.protocols>
                     </propertiesJMeter>
-                    <propertiesGlobal>
-                        <buildNo>${buildNo}</buildNo>
-                    </propertiesGlobal>
                     <propertiesUser>
+                        <buildNo>${buildNo}</buildNo>
                         <server.rmi.ssl.disable>true</server.rmi.ssl.disable>
                         <httpsampler.ignore_failed_embedded_resources>true</httpsampler.ignore_failed_embedded_resources>
                     </propertiesUser>
