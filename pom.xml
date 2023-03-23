@@ -66,7 +66,6 @@
                         <buildNo>${buildNo}</buildNo>
                     </propertiesGlobal>
                     <propertiesUser>
-                        <buildNo>${buildNo}</buildNo>
                         <server.rmi.ssl.disable>true</server.rmi.ssl.disable>
                         <httpsampler.ignore_failed_embedded_resources>true</httpsampler.ignore_failed_embedded_resources>
                     </propertiesUser>
