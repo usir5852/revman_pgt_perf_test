@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sysco.perfromance.engineering</groupId>
-    <artifactId>tqe-perf-eng-test-jenkins</artifactId>
-    <version>1.0.0</version>
+    <artifactId>revman_pgt_perf_test</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>tqe-perf-eng-test-jenkins</name>
+    <name>revman_pgt_perf_test</name>
     <url>http://maven.apache.org</url>
     <dependencies>
     </dependencies>
