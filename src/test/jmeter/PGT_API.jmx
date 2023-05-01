@@ -55,7 +55,7 @@
           </elementProp>
           <elementProp name="throughput_createGroup" elementType="Argument">
             <stringProp name="Argument.name">throughput_createGroup</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_createGroup,10)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_createGroup,100)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_updateGroup" elementType="Argument">
@@ -270,7 +270,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="440145499">
             <stringProp name="1463750315">${threadCount_createGroup}</stringProp>
@@ -324,6 +324,7 @@
   &quot;groupName&quot;:&quot;${groupName_MDRM}&quot;,&#xd;
   &quot;notes&quot;:&quot;${notes_MDRM}&quot;,&#xd;
   &quot;site&quot;:${site_MDRM},&#xd;
+  &quot;validFrom&quot;:${validFrom_MDRM},&#xd;
   &quot;accountsAdded&quot;:${accountsAdded_MDRM},&#xd;
   &quot;leadAccount&quot;:${leadAccount_MDRM}&#xd;
 }</stringProp>
@@ -377,7 +378,7 @@
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
               <stringProp name="filename">/opt/perf-test-data/groupDataForCreate_MDRMUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
-              <stringProp name="variableNames">accountType_MDRM,groupName_MDRM,notes_MDRM,site_MDRM,accountsAdded_MDRM,leadAccount_MDRM</stringProp>
+              <stringProp name="variableNames">accountType_MDRM,groupName_MDRM,notes_MDRM,site_MDRM,validFrom_MDRM,validFrom_MDRD,accountsAdded_MDRM,leadAccount_MDRM</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
               <stringProp name="delimiter">\t</stringProp>
               <boolProp name="quotedData">false</boolProp>
@@ -410,6 +411,7 @@
   &quot;groupName&quot;:&quot;${groupName_DLS}&quot;,&#xd;
   &quot;notes&quot;:&quot;${notes_DLS}&quot;,&#xd;
   &quot;site&quot;:${site_DLS},&#xd;
+  &quot;validFrom&quot;:${validFrom_DLS},&#xd;
   &quot;accountsAdded&quot;:${accountsAdded_DLS},&#xd;
   &quot;leadAccount&quot;:${leadAccount_DLS}&#xd;
 }</stringProp>
@@ -463,7 +465,7 @@
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
               <stringProp name="filename">/opt/perf-test-data/groupDataForCreate_DLSUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
-              <stringProp name="variableNames">accountType_DLS,groupName_DLS,notes_DLS,site_DLS,accountsAdded_DLS,leadAccount_DLS</stringProp>
+              <stringProp name="variableNames">accountType_DLS,groupName_DLS,notes_DLS,site_DLS,validFrom_DLS,accountsAdded_DLS,leadAccount_DLS</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
               <stringProp name="delimiter">\t</stringProp>
               <boolProp name="quotedData">false</boolProp>
@@ -529,7 +531,8 @@
 &quot;notes&quot;:&quot;${notes_MDRM}&quot;,&#xd;
 &quot;accountsAdded&quot;:${accountsAdded_MDRM},&#xd;
 &quot;accountsRemoved&quot;:${accountsRemoved_MDRM},&#xd;
-&quot;leadAccount&quot;:${leadAccount_MDRM}&#xd;
+&quot;leadAccount&quot;:${leadAccount_MDRM},&#xd;
+&quot;validFrom&quot;:${validFrom_MDRM}&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -581,7 +584,7 @@
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
               <stringProp name="filename">/opt/perf-test-data/groupDataforUpdate_MDRMUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
-              <stringProp name="variableNames">groupId_MDRM,groupName_MDRM,notes_MDRM,accountsAdded_MDRM,accountsRemoved_MDRM,leadAccount_MDRM</stringProp>
+              <stringProp name="variableNames">groupId_MDRM,groupName_MDRM,notes_MDRM,accountsAdded_MDRM,accountsRemoved_MDRM,leadAccount_MDRM,validFrom_MDRM</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
               <stringProp name="delimiter">\t</stringProp>
               <boolProp name="quotedData">false</boolProp>
@@ -614,7 +617,8 @@
 &quot;notes&quot;:&quot;${notes_DLS}&quot;,&#xd;
 &quot;accountsAdded&quot;:${accountsAdded_DLS},&#xd;
 &quot;accountsRemoved&quot;:${accountsRemoved_DLS},&#xd;
-&quot;leadAccount&quot;:${leadAccount_DLS}&#xd;
+&quot;leadAccount&quot;:${leadAccount_DLS},&#xd;
+&quot;validFrom&quot;:${validFrom_DLS}&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -638,7 +642,7 @@
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
               <stringProp name="filename">/opt/perf-test-data/testdata/groupDataforUpdate_DLSUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
-              <stringProp name="variableNames">groupId_DLS,groupName_DLS,notes_DLS,accountsAdded_DLS,accountsRemoved_DLS,leadAccount_DLS</stringProp>
+              <stringProp name="variableNames">groupId_DLS,groupName_DLS,notes_DLS,accountsAdded_DLS,accountsRemoved_DLS,leadAccount_DLS,validFrom_MDRM</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
               <stringProp name="delimiter">\t</stringProp>
               <boolProp name="quotedData">false</boolProp>
@@ -727,7 +731,7 @@
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;groupList&quot;:[56450]}</stringProp>
+                  <stringProp name="Argument.value">{&quot;groupList&quot;:${groupId_MDRM}}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -3092,7 +3096,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filterMDRM" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
               <collectionProp name="Arguments.arguments"/>
             </elementProp>
@@ -3144,7 +3148,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filterSA" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
               <collectionProp name="Arguments.arguments"/>
             </elementProp>
@@ -3196,7 +3200,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filteraDSM" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
               <collectionProp name="Arguments.arguments"/>
             </elementProp>
@@ -3248,7 +3252,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filterSC" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
               <collectionProp name="Arguments.arguments"/>
             </elementProp>
@@ -3300,7 +3304,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filterDLS" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
               <collectionProp name="Arguments.arguments"/>
             </elementProp>
@@ -3352,7 +3356,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filterSupport" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
               <collectionProp name="Arguments.arguments"/>
             </elementProp>
