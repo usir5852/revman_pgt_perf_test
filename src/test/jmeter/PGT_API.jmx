@@ -25,12 +25,12 @@
           </elementProp>
           <elementProp name="test_duration" elementType="Argument">
             <stringProp name="Argument.name">test_duration</stringProp>
-            <stringProp name="Argument.value">${__P(test_duration,1800)}</stringProp>
+            <stringProp name="Argument.value">${__P(test_duration,300)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="target_tp_duration" elementType="Argument">
             <stringProp name="Argument.name">target_tp_duration</stringProp>
-            <stringProp name="Argument.value">${__P(target_tp_duration,1800)}</stringProp>
+            <stringProp name="Argument.value">${__P(target_tp_duration,300)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="rampDownPeriod" elementType="Argument">
@@ -65,7 +65,7 @@
           </elementProp>
           <elementProp name="throughput_updateGroup" elementType="Argument">
             <stringProp name="Argument.name">throughput_updateGroup</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_updateGroup,10)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_updateGroup,15)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_expierGroup" elementType="Argument">
@@ -75,7 +75,7 @@
           </elementProp>
           <elementProp name="throughput_expierGroup" elementType="Argument">
             <stringProp name="Argument.name">throughput_expierGroup</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_expierGroup,10)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_expierGroup,15)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_groupDetails" elementType="Argument">
@@ -163,7 +163,7 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="-1543820164">
             <stringProp name="550240279">${threadCount_userDetails}</stringProp>
@@ -270,7 +270,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="440145499">
             <stringProp name="1463750315">${threadCount_createGroup}</stringProp>
@@ -557,7 +557,7 @@
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">pgt-oidc-data</stringProp>
-                  <stringProp name="Header.value">eyJraWQiOiJKNXVwdU5jNFRCaDBMYzcxZ0twQ2JnMG9zckZYdURsVlpZZ25YMlNYQUVrPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI5ODQ2OGVlMi04N2NmLTQzMjgtYTgxYS1kNzgxYTU5OWM1MWEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJvZmlsZSI6Im1kcm0iLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9BV0ZQZjl1OUsiLCJjb2duaXRvOnVzZXJuYW1lIjoiOTg0NjhlZTItODdjZi00MzI4LWE4MWEtZDc4MWE1OTljNTFhIiwiZ2l2ZW5fbmFtZSI6InRlc3R1c2VyIiwibG9jYWxlIjoiMDAwIC0gQ29ycG9yYXRlIiwiYXVkIjoiNTRldWdpZWNwcGlnNWQ4OW51bzU0aGNwYW0iLCJldmVudF9pZCI6IjZiY2RkMjkyLTBlYmMtNDgyZC04ZWVlLTNjYTkzNmJlOTg4YiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjgxMDU5NzA0LCJuYW1lIjoidHN0X3BndHRlc3Q0QHN5c2NvLmNvbSIsIm5pY2tuYW1lIjoidHN0X3BndHRlc3Q0IiwiY3VzdG9tOmRpc3BsYXlOYW1lIjoicGd0dGVzdDQiLCJleHAiOjE2ODEwNjMzMDQsImlhdCI6MTY4MTA1OTcwNCwiZmFtaWx5X25hbWUiOiJwZ3R0ZXN0NCIsImVtYWlsIjoicGd0dGVzdDRAc3lzY28uY29tIn0.hFuAV6azXst7FQhGlVxFHUd6vWnyqqqFzaugq-OGll4-700D-vdx07-jeoGOdh5_k5GS5EEnhIkNW6WkMKrCux06zA5_mDc1npVigWU_dZpGltak9pG5hyvg4ox-0cp6RdpSi-f3-Lp_VDmMfXEH1UybMKusfITCaFa-RsohfewNCjPlmBkBpx1Njc35X1j0jYqS4FS8PV5X27E_yhcAYaMSgwvPyYxFihfvxhQNNGyXKU7N-tK5BHvZhw0ZYeM5NDkNcp2WK4n7IkM7VpN39JfJFniBtX8Ni3L5HMeX15wjKixPVX9PpMDPPxqww9SWw5M9ouyhYpWLNGTFdr3_Sw</stringProp>
+                  <stringProp name="Header.value">${mdrmToken}</stringProp>
                 </elementProp>
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Accept</stringProp>
@@ -573,10 +573,10 @@
             <hashTree/>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
-                <stringProp name="1088">&quot;&quot;</stringProp>
+                <stringProp name="49586">200</stringProp>
               </collectionProp>
               <stringProp name="Assertion.custom_message"></stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_headers</stringProp>
               <boolProp name="Assertion.assume_success">false</boolProp>
               <intProp name="Assertion.test_type">2</intProp>
             </ResponseAssertion>
@@ -619,7 +619,8 @@
 &quot;accountsRemoved&quot;:${accountsRemoved_DLS},&#xd;
 &quot;leadAccount&quot;:${leadAccount_DLS},&#xd;
 &quot;validFrom&quot;:&quot;${validFrom_DLS}&quot;&#xd;
-}</stringProp>
+}&#xd;
+</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -629,7 +630,7 @@
             <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
             <stringProp name="HTTPSampler.path">pgt/v1/groups/${groupId_DLS}</stringProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <stringProp name="HTTPSampler.method">PUT</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -640,9 +641,9 @@
           </HTTPSamplerProxy>
           <hashTree>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/testdata/groupDataforUpdate_DLSUser.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/groupDataforUpdate_DLSUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
-              <stringProp name="variableNames">groupId_DLS,groupName_DLS,notes_DLS,accountsAdded_DLS,accountsRemoved_DLS,leadAccount_DLS,validFrom_MDRM</stringProp>
+              <stringProp name="variableNames">groupId_DLS,groupName_DLS,notes_DLS,accountsAdded_DLS,accountsRemoved_DLS,leadAccount_DLS,validFrom_DLS</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
               <stringProp name="delimiter">\t</stringProp>
               <boolProp name="quotedData">false</boolProp>
@@ -659,11 +660,11 @@
                 </elementProp>
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Accept</stringProp>
-                  <stringProp name="Header.value">application</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
                 </elementProp>
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>
-                  <stringProp name="Header.value">application</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
                 </elementProp>
               </collectionProp>
               <stringProp name="TestPlan.comments">DLS user token</stringProp>
@@ -671,10 +672,10 @@
             <hashTree/>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
-                <stringProp name="1088">&quot;&quot;</stringProp>
+                <stringProp name="49586">200</stringProp>
               </collectionProp>
               <stringProp name="Assertion.custom_message"></stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_headers</stringProp>
               <boolProp name="Assertion.assume_success">false</boolProp>
               <intProp name="Assertion.test_type">2</intProp>
             </ResponseAssertion>
@@ -759,11 +760,11 @@
                 </elementProp>
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Accept</stringProp>
-                  <stringProp name="Header.value">application</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
                 </elementProp>
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>
-                  <stringProp name="Header.value">application</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
                 </elementProp>
               </collectionProp>
               <stringProp name="TestPlan.comments">MMRM/MDRM user token</stringProp>
@@ -771,10 +772,10 @@
             <hashTree/>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
-                <stringProp name="1088">&quot;&quot;</stringProp>
+                <stringProp name="49586">200</stringProp>
               </collectionProp>
               <stringProp name="Assertion.custom_message"></stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_headers</stringProp>
               <boolProp name="Assertion.assume_success">false</boolProp>
               <intProp name="Assertion.test_type">2</intProp>
             </ResponseAssertion>
@@ -850,11 +851,11 @@
                 </elementProp>
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Accept</stringProp>
-                  <stringProp name="Header.value">application</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
                 </elementProp>
                 <elementProp name="" elementType="Header">
                   <stringProp name="Header.name">Content-Type</stringProp>
-                  <stringProp name="Header.value">application</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
                 </elementProp>
               </collectionProp>
               <stringProp name="TestPlan.comments">DLS user token</stringProp>
@@ -862,10 +863,10 @@
             <hashTree/>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
-                <stringProp name="1088">&quot;&quot;</stringProp>
+                <stringProp name="49586">200</stringProp>
               </collectionProp>
               <stringProp name="Assertion.custom_message"></stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_headers</stringProp>
               <boolProp name="Assertion.assume_success">false</boolProp>
               <intProp name="Assertion.test_type">2</intProp>
             </ResponseAssertion>
@@ -1576,7 +1577,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1265961814">
             <stringProp name="1346998819">${threadCount_accountList}</stringProp>
@@ -3456,7 +3457,7 @@
         <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
       </BackendListener>
       <hashTree/>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -3493,7 +3494,7 @@
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>

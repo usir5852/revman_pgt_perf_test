@@ -1,4 +1,7 @@
-﻿30644	Perf test grp 19	test note 0	[]	[621418]	629871	05/01/2023
+groupId	groupName	notes	addedAccounts	removedAccounts	leadAccount	validFrom
+30647	Perf test grp 21	test note 0	[]	[647527]	631740	05/01/2023
+30645	Perf test grp 20	test note 0	[]	[621689, 621713]	621872	05/01/2023
+30644	Perf test grp 19	test note 0	[]	[621418]	629871	05/01/2023
 30636	Perf test grp 18	test note 0	[]	[644133, 644135]	628907	05/01/2023
 30632	Perf test grp 17	test note 0	[]	[619379]	619374	05/01/2023
 33051	Perf test grp 515	test note 0	[610218, 610225]	[]	673776	05/01/2023
