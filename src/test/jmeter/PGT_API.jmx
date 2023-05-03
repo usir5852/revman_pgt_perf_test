@@ -163,7 +163,7 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="-1543820164">
             <stringProp name="550240279">${threadCount_userDetails}</stringProp>
@@ -256,7 +256,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/testdata/userDetails.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/userDetails.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">userid,token</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
@@ -270,7 +270,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="440145499">
             <stringProp name="1463750315">${threadCount_createGroup}</stringProp>
@@ -376,7 +376,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/testdata/groupDataForCreate_MDRMUser.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/groupDataForCreate_MDRMUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">accountType_MDRM,groupName_MDRM,notes_MDRM,site_MDRM,validFrom_MDRM,accountsAdded_MDRM,leadAccount_MDRM</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
@@ -463,7 +463,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/testdata/groupDataForCreate_DLSUser.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/groupDataForCreate_DLSUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">accountType_DLS,groupName_DLS,notes_DLS,site_DLS,validFrom_DLS,accountsAdded_DLS,leadAccount_DLS</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
@@ -781,7 +781,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/testdata/groupDataForExpier_MDRMUser.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/groupDataForExpier_MDRMUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">groupId_MDRM</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
@@ -1000,7 +1000,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/testdata/groupDataForGroupList_WithoutFilters_MDRMUser.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/groupDataForGroupList_WithoutFilters_MDRMUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">pageNo,pageSize,status,query,sortColumn,sortDirection</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
@@ -1121,7 +1121,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/testdata/groupDataForGroupList_WithFilters_MDRMUser.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/groupDataForGroupList_WithFilters_MDRMUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">pageNo,pageSize,status,site,accountType,query,sortColumn,sortDirection</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
@@ -1228,7 +1228,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/testdata/groupDataForGroupList_DefaultLogin_MDRMUser.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/groupDataForGroupList_DefaultLogin_MDRMUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">pageNo,pageSize,status,query,sortColumn,sortDirection</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
@@ -1335,7 +1335,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/testdata/testdata/groupDataForGroupList_WithoutFilters_DLSUser.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/groupDataForGroupList_WithoutFilters_DLSUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">pageNo,pageSize,status,query,sortColumn,sortDirection</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
@@ -1456,7 +1456,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/testdata/testdata/groupDataForGroupList_WithFilters_DLSUser.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/groupDataForGroupList_WithFilters_DLSUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">pageNo,pageSize,status,site,accountType,query,sortColumn,sortDirection</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
@@ -1563,7 +1563,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/testdata/testdata/groupDataForGroupList_DefaultLogin_DLSUser.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/groupDataForGroupList_DefaultLogin_DLSUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">pageNo,pageSize,status,query,sortColumn,sortDirection</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
