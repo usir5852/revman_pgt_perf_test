@@ -165,8 +165,8 @@
     <hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="866094573">
-            <stringProp name="-87019245">${threadCount_filters}</stringProp>
+          <collectionProp name="-1543820164">
+            <stringProp name="550240279">${threadCount_userDetails}</stringProp>
             <stringProp name="0">0</stringProp>
             <stringProp name="1989496920">${rampUpPeriod}</stringProp>
             <stringProp name="-1613245155">${target_tp_duration}</stringProp>
