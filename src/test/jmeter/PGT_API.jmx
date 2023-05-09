@@ -68,14 +68,14 @@
             <stringProp name="Argument.value">${__P(throughput_updateGroup,15)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="threadCount_expierGroup" elementType="Argument">
-            <stringProp name="Argument.name">threadCount_expierGroup</stringProp>
+          <elementProp name="threadCount_expireGroup" elementType="Argument">
+            <stringProp name="Argument.name">threadCount_expireGroup</stringProp>
             <stringProp name="Argument.value">${__P(threadCount_expierGroup,10)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="throughput_expierGroup" elementType="Argument">
-            <stringProp name="Argument.name">throughput_expierGroup</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_expierGroup,15)}</stringProp>
+          <elementProp name="throughput_expireGroup" elementType="Argument">
+            <stringProp name="Argument.name">throughput_expireGroup</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_expireGroup,100)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_groupDetails" elementType="Argument">
@@ -95,7 +95,7 @@
           </elementProp>
           <elementProp name="throughput_groupList" elementType="Argument">
             <stringProp name="Argument.name">throughput_groupList</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_groupList,8500)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupList,16650)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_accountList" elementType="Argument">
@@ -308,7 +308,7 @@
           <intProp name="ThroughputController.maxThroughput">1</intProp>
           <FloatProperty>
             <name>ThroughputController.percentThroughput</name>
-            <value>100.0</value>
+            <value>80.0</value>
             <savedValue>0.0</savedValue>
           </FloatProperty>
         </ThroughputController>
@@ -382,14 +382,14 @@
               <boolProp name="ignoreFirstLine">false</boolProp>
               <stringProp name="delimiter">\t</stringProp>
               <boolProp name="quotedData">false</boolProp>
-              <boolProp name="recycle">false</boolProp>
-              <boolProp name="stopThread">true</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
               <stringProp name="shareMode">shareMode.all</stringProp>
             </CSVDataSet>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupCreateDLS20%" enabled="false">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupCreateDLS20%" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">true</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -477,7 +477,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="-155423802">
             <stringProp name="-1012279112">${threadCount_updateGroup}</stringProp>
@@ -683,10 +683,10 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1119130375">
-            <stringProp name="-1630978168">${threadCount_expierGroup}</stringProp>
+          <collectionProp name="1503443493">
+            <stringProp name="898073742">${threadCount_expireGroup}</stringProp>
             <stringProp name="0">0</stringProp>
             <stringProp name="1989496920">${rampUpPeriod}</stringProp>
             <stringProp name="-1613245155">${target_tp_duration}</stringProp>
@@ -701,7 +701,7 @@
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
         <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
-          <stringProp name="throughput">${throughput_expierGroup}</stringProp>
+          <stringProp name="throughput">${throughput_expireGroup}</stringProp>
           <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
           <stringProp name="duration">${test_duration}</stringProp>
           <intProp name="batchSize">1</intProp>
