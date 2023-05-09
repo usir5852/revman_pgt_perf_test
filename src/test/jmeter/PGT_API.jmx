@@ -40,12 +40,12 @@
           </elementProp>
           <elementProp name="threadCount_userDetails" elementType="Argument">
             <stringProp name="Argument.name">threadCount_userDetails</stringProp>
-            <stringProp name="Argument.value">${__P(threadCount_userDetails,10)}</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_userDetails,1)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_userDetails" elementType="Argument">
             <stringProp name="Argument.name">throughput_userDetails</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_userDetails,100)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_userDetails,10)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_createGroup" elementType="Argument">
@@ -195,7 +195,7 @@
           <longProp name="randomSeed">0</longProp>
         </PreciseThroughputTimer>
         <hashTree/>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="UserDetail" enabled="true">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="UserDetails" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">true</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -206,7 +206,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="userDetail" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="userDetails" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
               <collectionProp name="Arguments.arguments">
                 <elementProp name="userSyscoId" elementType="HTTPArgument">
@@ -251,7 +251,7 @@
             </HeaderManager>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/revman_pgt_perf_test/src/test/testdata/userDetails.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/userDetails.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">userid,token</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
