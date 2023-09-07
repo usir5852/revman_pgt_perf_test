@@ -40,12 +40,12 @@
           </elementProp>
           <elementProp name="threadCount_userDetails" elementType="Argument">
             <stringProp name="Argument.name">threadCount_userDetails</stringProp>
-            <stringProp name="Argument.value">${__P(threadCount_userDetails,100)}</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_userDetails,10)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_userDetails" elementType="Argument">
             <stringProp name="Argument.name">throughput_userDetails</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_userDetails,1600)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_userDetails,100)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_createGroup" elementType="Argument">
@@ -381,7 +381,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">opt/perf-test-data/groupDataForCreate_MDRMUser.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/groupDataForCreate_MDRMUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">accountType_MDRM,groupName_MDRM,notes_MDRM,site_MDRM,accountsAdded_MDRM,leadAccount_MDRM</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
@@ -467,7 +467,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">opt/perf-test-data/groupDataForCreate_DLSUser.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/groupDataForCreate_DLSUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">accountType_DLS,groupName_DLS,notes_DLS,site_DLS,accountsAdded_DLS,leadAccount_DLS</stringProp>
               <boolProp name="ignoreFirstLine">false</boolProp>
