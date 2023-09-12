@@ -25,12 +25,12 @@
           </elementProp>
           <elementProp name="test_duration" elementType="Argument">
             <stringProp name="Argument.name">test_duration</stringProp>
-            <stringProp name="Argument.value">${__P(test_duration,600)}</stringProp>
+            <stringProp name="Argument.value">${__P(test_duration,3600)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="target_tp_duration" elementType="Argument">
             <stringProp name="Argument.name">target_tp_duration</stringProp>
-            <stringProp name="Argument.value">${__P(target_tp_duration,600)}</stringProp>
+            <stringProp name="Argument.value">${__P(target_tp_duration,3600)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="rampDownPeriod" elementType="Argument">
@@ -40,22 +40,22 @@
           </elementProp>
           <elementProp name="threadCount_userDetails" elementType="Argument">
             <stringProp name="Argument.name">threadCount_userDetails</stringProp>
-            <stringProp name="Argument.value">${__P(threadCount_userDetails,10)}</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_userDetails,100)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_userDetails" elementType="Argument">
             <stringProp name="Argument.name">throughput_userDetails</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_userDetails,100)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_userDetails,150)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_createGroup" elementType="Argument">
             <stringProp name="Argument.name">threadCount_createGroup</stringProp>
-            <stringProp name="Argument.value">${__P(threadCount_createGroup,20)}</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_createGroup,100)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_createGroup" elementType="Argument">
             <stringProp name="Argument.name">throughput_createGroup</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_createGroup,80)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_createGroup,100)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_updateGroup" elementType="Argument">
@@ -65,7 +65,7 @@
           </elementProp>
           <elementProp name="throughput_updateGroup" elementType="Argument">
             <stringProp name="Argument.name">throughput_updateGroup</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_updateGroup,2250)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_updateGroup,100)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_expireGroup" elementType="Argument">
@@ -75,7 +75,7 @@
           </elementProp>
           <elementProp name="throughput_expireGroup" elementType="Argument">
             <stringProp name="Argument.name">throughput_expireGroup</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_expireGroup,1350)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_expireGroup,100)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_groupDetails" elementType="Argument">
@@ -85,7 +85,7 @@
           </elementProp>
           <elementProp name="throughput_groupDetails" elementType="Argument">
             <stringProp name="Argument.name">throughput_groupDetails</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_groupDetails,16000)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails,150)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_groupList" elementType="Argument">
@@ -95,7 +95,7 @@
           </elementProp>
           <elementProp name="throughput_groupList" elementType="Argument">
             <stringProp name="Argument.name">throughput_groupList</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_groupList,16650)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupList,300)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_accountList" elementType="Argument">
@@ -105,7 +105,7 @@
           </elementProp>
           <elementProp name="throughput_accountList" elementType="Argument">
             <stringProp name="Argument.name">throughput_accountList</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_accountList,1040)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_accountList,400)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_accountSearch" elementType="Argument">
@@ -115,7 +115,7 @@
           </elementProp>
           <elementProp name="throughput_accountSearch" elementType="Argument">
             <stringProp name="Argument.name">throughput_accountSearch</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_accountSearch,17500)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_accountSearch,500)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_filters" elementType="Argument">
@@ -125,7 +125,7 @@
           </elementProp>
           <elementProp name="throughput_filters" elementType="Argument">
             <stringProp name="Argument.name">throughput_filters</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_filters,1600)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_filters,150)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="saToken" elementType="Argument">
@@ -394,7 +394,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupCreateDLS20%" enabled="false">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupCreateDLS20%" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">true</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
