@@ -50,7 +50,7 @@
           </elementProp>
           <elementProp name="threadCount_createGroup" elementType="Argument">
             <stringProp name="Argument.name">threadCount_createGroup</stringProp>
-            <stringProp name="Argument.value">${__P(threadCount_createGroup,100)}</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_createGroup,50)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_createGroup" elementType="Argument">
@@ -60,7 +60,7 @@
           </elementProp>
           <elementProp name="threadCount_updateGroup" elementType="Argument">
             <stringProp name="Argument.name">threadCount_updateGroup</stringProp>
-            <stringProp name="Argument.value">${__P(threadCount_updateGroup,100)}</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_updateGroup,50)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_updateGroup" elementType="Argument">
@@ -309,8 +309,8 @@
         </PreciseThroughputTimer>
         <hashTree/>
         <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupCreateMDRM80%" enabled="true">
-          <intProp name="ThroughputController.style">0</intProp>
-          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">true</boolProp>
           <intProp name="ThroughputController.maxThroughput">80</intProp>
           <FloatProperty>
             <name>ThroughputController.percentThroughput</name>
@@ -395,8 +395,8 @@
           </hashTree>
         </hashTree>
         <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupCreateDLS20%" enabled="true">
-          <intProp name="ThroughputController.style">0</intProp>
-          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">true</boolProp>
           <intProp name="ThroughputController.maxThroughput">20</intProp>
           <FloatProperty>
             <name>ThroughputController.percentThroughput</name>
@@ -514,12 +514,12 @@
         </PreciseThroughputTimer>
         <hashTree/>
         <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupUpdateMDRM80%" enabled="true">
-          <intProp name="ThroughputController.style">0</intProp>
-          <boolProp name="ThroughputController.perThread">false</boolProp>
-          <intProp name="ThroughputController.maxThroughput">80</intProp>
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">true</boolProp>
+          <intProp name="ThroughputController.maxThroughput">20</intProp>
           <FloatProperty>
             <name>ThroughputController.percentThroughput</name>
-            <value>80.0</value>
+            <value>20.0</value>
             <savedValue>0.0</savedValue>
           </FloatProperty>
         </ThroughputController>
@@ -599,8 +599,8 @@
           </hashTree>
         </hashTree>
         <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupUpdateDLS20%" enabled="true">
-          <intProp name="ThroughputController.style">0</intProp>
-          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">true</boolProp>
           <intProp name="ThroughputController.maxThroughput">20</intProp>
           <FloatProperty>
             <name>ThroughputController.percentThroughput</name>
