@@ -311,7 +311,7 @@
         <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupCreateMDRM80%" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <intProp name="ThroughputController.maxThroughput">80</intProp>
           <FloatProperty>
             <name>ThroughputController.percentThroughput</name>
             <value>80.0</value>
@@ -397,7 +397,7 @@
         <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupCreateDLS20%" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <intProp name="ThroughputController.maxThroughput">20</intProp>
           <FloatProperty>
             <name>ThroughputController.percentThroughput</name>
             <value>20.0</value>
@@ -516,7 +516,7 @@
         <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupUpdateMDRM80%" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <intProp name="ThroughputController.maxThroughput">80</intProp>
           <FloatProperty>
             <name>ThroughputController.percentThroughput</name>
             <value>80.0</value>
@@ -601,7 +601,7 @@
         <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupUpdateDLS20%" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <intProp name="ThroughputController.maxThroughput">20</intProp>
           <FloatProperty>
             <name>ThroughputController.percentThroughput</name>
             <value>20.0</value>
