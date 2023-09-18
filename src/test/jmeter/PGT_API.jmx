@@ -311,7 +311,7 @@
         <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupCreateMDRM80%" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">80</intProp>
+          <intProp name="ThroughputController.maxThroughput">1</intProp>
           <FloatProperty>
             <name>ThroughputController.percentThroughput</name>
             <value>80.0</value>
