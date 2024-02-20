@@ -25,12 +25,12 @@
           </elementProp>
           <elementProp name="test_duration" elementType="Argument">
             <stringProp name="Argument.name">test_duration</stringProp>
-            <stringProp name="Argument.value">${__P(test_duration,300)}</stringProp>
+            <stringProp name="Argument.value">${__P(test_duration,1200)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="target_tp_duration" elementType="Argument">
             <stringProp name="Argument.name">target_tp_duration</stringProp>
-            <stringProp name="Argument.value">${__P(target_tp_duration,300)}</stringProp>
+            <stringProp name="Argument.value">${__P(target_tp_duration,1200)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="rampDownPeriod" elementType="Argument">
@@ -50,12 +50,12 @@
           </elementProp>
           <elementProp name="threadCount_createGroup" elementType="Argument">
             <stringProp name="Argument.name">threadCount_createGroup</stringProp>
-            <stringProp name="Argument.value">${__P(threadCount_createGroup,5)}</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_createGroup,100)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_createGroup" elementType="Argument">
             <stringProp name="Argument.name">throughput_createGroup</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_createGroup,100)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_createGroup,500)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_updateGroup" elementType="Argument">
@@ -415,7 +415,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupCreateDLS20%" enabled="true">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupCreateDLS20%" enabled="false">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">true</boolProp>
           <intProp name="ThroughputController.maxThroughput">20</intProp>
@@ -502,7 +502,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupCreateForCleanupDLS100%" enabled="false">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupCreateForCleanupDLS100%" enabled="true">
           <intProp name="ThroughputController.style">1</intProp>
           <boolProp name="ThroughputController.perThread">true</boolProp>
           <intProp name="ThroughputController.maxThroughput">20</intProp>
@@ -4926,7 +4926,7 @@
           <collectionProp name="Arguments.arguments">
             <elementProp name="testName" elementType="Argument">
               <stringProp name="Argument.name">testName</stringProp>
-              <stringProp name="Argument.value">PGT-API</stringProp>
+              <stringProp name="Argument.value">Test</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="nodeName" elementType="Argument">
@@ -4936,27 +4936,27 @@
             </elementProp>
             <elementProp name="runId" elementType="Argument">
               <stringProp name="Argument.name">runId</stringProp>
-              <stringProp name="Argument.value">${__P(buildNo)}</stringProp>
+              <stringProp name="Argument.value">R001</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="influxDBURL" elementType="Argument">
               <stringProp name="Argument.name">influxDBURL</stringProp>
-              <stringProp name="Argument.value">https://perfplatform.cloud.sysco.net/influx</stringProp>
+              <stringProp name="Argument.value">http://localhost:8086/</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="influxDBToken" elementType="Argument">
               <stringProp name="Argument.name">influxDBToken</stringProp>
-              <stringProp name="Argument.value">9eanu4pcTwhfcQ9CyMAFoeAoXlYv08Efs4iFnGEneGaKXNO9AgSMQnrXnQfZNi8LoO86HV6PpOVB2kcSU3h8Lw==</stringProp>
+              <stringProp name="Argument.value">put token here</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="influxDBOrganization" elementType="Argument">
               <stringProp name="Argument.name">influxDBOrganization</stringProp>
-              <stringProp name="Argument.value">qperf</stringProp>
+              <stringProp name="Argument.value">performance_testing</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="influxDBBucket" elementType="Argument">
               <stringProp name="Argument.name">influxDBBucket</stringProp>
-              <stringProp name="Argument.value">prod_jmeter</stringProp>
+              <stringProp name="Argument.value">jmeter</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="influxDBFlushInterval" elementType="Argument">
