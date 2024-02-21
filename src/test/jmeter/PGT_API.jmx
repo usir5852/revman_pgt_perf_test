@@ -25,12 +25,12 @@
           </elementProp>
           <elementProp name="test_duration" elementType="Argument">
             <stringProp name="Argument.name">test_duration</stringProp>
-            <stringProp name="Argument.value">${__P(test_duration,1800)}</stringProp>
+            <stringProp name="Argument.value">${__P(test_duration,1200)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="target_tp_duration" elementType="Argument">
             <stringProp name="Argument.name">target_tp_duration</stringProp>
-            <stringProp name="Argument.value">${__P(target_tp_duration,1800)}</stringProp>
+            <stringProp name="Argument.value">${__P(target_tp_duration,1200)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="rampDownPeriod" elementType="Argument">
@@ -50,12 +50,12 @@
           </elementProp>
           <elementProp name="threadCount_createGroup" elementType="Argument">
             <stringProp name="Argument.name">threadCount_createGroup</stringProp>
-            <stringProp name="Argument.value">${__P(threadCount_createGroup,200)}</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_createGroup,100)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_createGroup" elementType="Argument">
             <stringProp name="Argument.name">throughput_createGroup</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_createGroup,850)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_createGroup,450)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_updateGroup" elementType="Argument">
@@ -576,7 +576,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/SSgroupDataDLSUser_opco163.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/SSgroupDataDLSUser_opco163_1.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">accountType_MDRM,groupName_MDRM,notes_MDRM,leadSite_MDRM,sites_MDRM,accountsAdded_MDRM,leadAccount_MDRM</stringProp>
               <boolProp name="ignoreFirstLine">true</boolProp>
@@ -663,7 +663,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/SSgroupDataDLSUser_opco7.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/SSgroupDataDLSUser_opco7_1.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">accountType_MDRM,groupName_MDRM,notes_MDRM,leadSite_MDRM,sites_MDRM,accountsAdded_MDRM,leadAccount_MDRM</stringProp>
               <boolProp name="ignoreFirstLine">true</boolProp>
@@ -750,7 +750,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/SSgroupDataDLSUser_opco8.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/SSgroupDataDLSUser_opco8_1.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">accountType_MDRM,groupName_MDRM,notes_MDRM,leadSite_MDRM,sites_MDRM,accountsAdded_MDRM,leadAccount_MDRM</stringProp>
               <boolProp name="ignoreFirstLine">true</boolProp>
@@ -837,7 +837,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/SSgroupDataDLSUser_opco32.csv</stringProp>
+              <stringProp name="filename">/opt/perf-test-data/SSgroupDataDLSUser_opco32_1.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">accountType_MDRM,groupName_MDRM,notes_MDRM,leadSite_MDRM,sites_MDRM,accountsAdded_MDRM,leadAccount_MDRM</stringProp>
               <boolProp name="ignoreFirstLine">true</boolProp>
