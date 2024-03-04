@@ -10,7 +10,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="baseUrl" elementType="Argument">
             <stringProp name="Argument.name">baseUrl</stringProp>
-            <stringProp name="Argument.value">${__P(baseUrl,pgt-internal-qa.prcp-rm-np.us-east-1.aws.sysco.net)}</stringProp>
+            <stringProp name="Argument.value">${__P(baseUrl,pgt-internal-stg.prcp-rm-np.us-east-1.aws.sysco.net)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="protocol" elementType="Argument">
@@ -25,12 +25,12 @@
           </elementProp>
           <elementProp name="test_duration" elementType="Argument">
             <stringProp name="Argument.name">test_duration</stringProp>
-            <stringProp name="Argument.value">${__P(test_duration,100)}</stringProp>
+            <stringProp name="Argument.value">${__P(test_duration,600)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="target_tp_duration" elementType="Argument">
             <stringProp name="Argument.name">target_tp_duration</stringProp>
-            <stringProp name="Argument.value">${__P(target_tp_duration,3600)}</stringProp>
+            <stringProp name="Argument.value">${__P(target_tp_duration,600)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="rampDownPeriod" elementType="Argument">
@@ -50,17 +50,17 @@
           </elementProp>
           <elementProp name="threadCount_createGroup" elementType="Argument">
             <stringProp name="Argument.name">threadCount_createGroup</stringProp>
-            <stringProp name="Argument.value">${__P(threadCount_createGroup,100)}</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_createGroup,20)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_createGroup" elementType="Argument">
             <stringProp name="Argument.name">throughput_createGroup</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_createGroup,14)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_createGroup,20)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_updateGroup" elementType="Argument">
             <stringProp name="Argument.name">threadCount_updateGroup</stringProp>
-            <stringProp name="Argument.value">${__P(threadCount_updateGroup,100)}</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_updateGroup,20)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_updateGroup" elementType="Argument">
@@ -165,17 +165,17 @@
           </elementProp>
           <elementProp name="throughput_multi_site__groupDetails" elementType="Argument">
             <stringProp name="Argument.name">throughput_multi_site__groupDetails</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_groupDetails,60)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_multi_site__groupDetails,60)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_multi_site_createGroup" elementType="Argument">
             <stringProp name="Argument.name">throughput_multi_site_createGroup</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_createGroup,21)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_multi_site_createGroup,30)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_mu;ti_site_updateGroup" elementType="Argument">
             <stringProp name="Argument.name">throughput_mu;ti_site_updateGroup</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_updateGroup,30)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_mu;ti_site_updateGroup,30)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -339,7 +339,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="createGroup" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="createGroup-MDRM" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
@@ -402,7 +402,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/groupDataForCreate_MDRMUser.csv</stringProp>
+              <stringProp name="filename">C:/Users/Subashani H/Documents/Sprint/Sprint FY2418/API latest/revman_pgt_perf_test/src/test/testdata/groupDataForCreate_MDRMUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">accountType_MDRM,groupName_MDRM,notes_MDRM,leadSite_MDRM,sites_MDRM,accountsAdded_MDRM,leadAccount_MDRM</stringProp>
               <boolProp name="ignoreFirstLine">true</boolProp>
@@ -426,7 +426,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="createGroup" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="createGroup-DLS" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
@@ -489,7 +489,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/groupDataForCreate_DLSUser.csv</stringProp>
+              <stringProp name="filename">C:/Users/Subashani H/Documents/Sprint/Sprint FY2418/API latest/revman_pgt_perf_test/src/test/testdata/groupDataForCreate_DLSUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">accountType_DLS,groupName_DLS,notes_DLS,leadSite_DLS,sites_DLS,accountsAdded_DLS,leadAccount_DLS</stringProp>
               <boolProp name="ignoreFirstLine">true</boolProp>
@@ -503,10 +503,10 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Create Multi Site group" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Create Multi Site group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="440145499">
-            <stringProp name="1463750315">${threadCount_createGroup}</stringProp>
+          <collectionProp name="-164479520">
+            <stringProp name="1752694382">${throughput_multi_site_createGroup}</stringProp>
             <stringProp name="0">0</stringProp>
             <stringProp name="1989496920">${rampUpPeriod}</stringProp>
             <stringProp name="-1613245155">${target_tp_duration}</stringProp>
@@ -546,7 +546,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="createGroup" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="createGroup-MDRM" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
@@ -633,20 +633,20 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="createGroup" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="createGroup-SUPPORT" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;accountType&quot;:&quot;${accountType_DLS}&quot;,&#xd;
-  &quot;groupName&quot;:&quot;${groupName_DLS}&quot;,&#xd;
-  &quot;notes&quot;:&quot;${notes_DLS}&quot;,&#xd;
-  &quot;sites&quot;:${sites_DLS},&#xd;
-  &quot;leadSite&quot;:${leadSite_DLS},&#xd;
-  &quot;accountsAdded&quot;:${accountsAdded_DLS},&#xd;
-  &quot;leadAccount&quot;:${leadAccount_DLS}&#xd;
+  &quot;accountType&quot;:&quot;${accountType_SUPPORT}&quot;,&#xd;
+  &quot;groupName&quot;:&quot;${groupName_SUPPORT}&quot;,&#xd;
+  &quot;notes&quot;:&quot;${notes_SUPPORT}&quot;,&#xd;
+  &quot;sites&quot;:${sites_SUPPORT},&#xd;
+  &quot;leadSite&quot;:${leadSite_SUPPORT},&#xd;
+  &quot;accountsAdded&quot;:${accountsAdded_SUPPORT},&#xd;
+  &quot;leadAccount&quot;:${leadAccount_SUPPORT}&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -698,7 +698,7 @@
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
               <stringProp name="filename">/opt/perf-test-data/multiSiteGroupDataForCreate_SUPPORTUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
-              <stringProp name="variableNames">accountType_MDRM,groupName_MDRM,notes_MDRM,leadSite_MDRM,sites_MDRM,accountsAdded_MDRM,leadAccount_MDRM</stringProp>
+              <stringProp name="variableNames">accountType_SUPPORT,groupName_SUPPORTnotes_SUPPORT,leadSite_SUPPORT,sites_SUPPORT,accountsAdded_SUPPORT,leadAccount_SUPPORT</stringProp>
               <boolProp name="ignoreFirstLine">true</boolProp>
               <stringProp name="delimiter">\t</stringProp>
               <boolProp name="quotedData">false</boolProp>
@@ -753,7 +753,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="updateGroup" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="updateGroup-MDRM" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
@@ -816,7 +816,7 @@
             </ResponseAssertion>
             <hashTree/>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/groupDataforUpdate_MDRMUser.csv</stringProp>
+              <stringProp name="filename">C:/Users/Subashani H/Documents/Sprint/Sprint FY2418/API latest/revman_pgt_perf_test/src/test/testdata/groupDataforUpdate_MDRMUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">groupId_MDRM,groupName_MDRM,notes_MDRM,sites_MDRM,leadSite_MDRM,accountsAdded_MDRM,accountsRemoved_MDRM,leadAccount_MDRM</stringProp>
               <boolProp name="ignoreFirstLine">true</boolProp>
@@ -840,7 +840,7 @@
           </FloatProperty>
         </ThroughputController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="updateGroup" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="updateGroup-DLS" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
@@ -849,7 +849,7 @@
                   <stringProp name="Argument.value">{&#xd;
 &quot;groupName&quot;:&quot;${groupName_DLS}&quot;,&#xd;
 &quot;leadSite&quot;:${leadSite_DLS},&#xd;
-&quot;sites&quot;:${sites_DLS},,&#xd;
+&quot;sites&quot;:${sites_DLS},&#xd;
 &quot;notes&quot;:&quot;${notes_DLS}&quot;,&#xd;
 &quot;accountsAdded&quot;:${accountsAdded_DLS},&#xd;
 &quot;accountsRemoved&quot;:${accountsRemoved_DLS},&#xd;
@@ -876,7 +876,7 @@
           </HTTPSamplerProxy>
           <hashTree>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/groupDataforUpdate_DLSUser.csv</stringProp>
+              <stringProp name="filename">C:/Users/Subashani H/Documents/Sprint/Sprint FY2418/API latest/revman_pgt_perf_test/src/test/testdata/groupDataforUpdate_DLSUser.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames">groupId_DLS,groupName_DLS,notes_DLS,sites_DLS,leadSite_DLS,accountsAdded_DLS,accountsRemoved_DLS,leadAccount_DLS</stringProp>
               <boolProp name="ignoreFirstLine">true</boolProp>
@@ -4834,7 +4834,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
+      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="false">
         <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="graphiteMetricsSender" elementType="Argument">
@@ -4947,7 +4947,7 @@
         <stringProp name="classname">org.apache.jmeter.visualizers.backend.graphite.GraphiteBackendListenerClient</stringProp>
       </BackendListener>
       <hashTree/>
-      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
