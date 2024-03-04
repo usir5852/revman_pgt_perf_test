@@ -12,7 +12,7 @@ pipeline {
             JOBNAME = "revmanpgtperftest"
 //   Project On-board TASK 2::
 //          Provide JMeter script name you want to run here. Don't add .jmx extension
-            scriptName = "PGT_API"
+            scriptName = "PGT_APIPerf"
     }
 
     stages {
