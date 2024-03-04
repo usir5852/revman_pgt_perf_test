@@ -4939,7 +4939,7 @@
             </elementProp>
             <elementProp name="testName" elementType="Argument">
               <stringProp name="Argument.name">testName</stringProp>
-              <stringProp name="Argument.value">PGT_APIPerf</stringProp>
+              <stringProp name="Argument.value">PGT-API</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
