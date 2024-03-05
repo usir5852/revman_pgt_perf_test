@@ -2835,7 +2835,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single - Site - Group - Detail" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single - Site - Group - Detail" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="-509379132">
             <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
@@ -3440,7 +3440,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi - Site - Group - Detail" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi - Site - Group - Detail" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="-509379132">
             <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
