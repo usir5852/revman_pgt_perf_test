@@ -40,7 +40,7 @@
           </elementProp>
           <elementProp name="threadCount_userDetails" elementType="Argument">
             <stringProp name="Argument.name">threadCount_userDetails</stringProp>
-            <stringProp name="Argument.value">${__P(threadCount_userDetails,100)}</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_userDetails,20)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_userDetails" elementType="Argument">
@@ -83,19 +83,9 @@
             <stringProp name="Argument.value">${__P(threadCount_groupDetails,100)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="throughput_groupDetails" elementType="Argument">
-            <stringProp name="Argument.name">throughput_groupDetails</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_groupDetails,88)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
           <elementProp name="threadCount_groupList" elementType="Argument">
             <stringProp name="Argument.name">threadCount_groupList</stringProp>
             <stringProp name="Argument.value">${__P(threadCount_groupList,100)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="throughput_groupList_DLS_Login" elementType="Argument">
-            <stringProp name="Argument.name">throughput_groupList_DLS_Login</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_groupList_DLS_Login,36)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="threadCount_accountList" elementType="Argument">
@@ -108,11 +98,6 @@
             <stringProp name="Argument.value">${__P(throughput_accountList_SC,25)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="threadCount_accountSearch" elementType="Argument">
-            <stringProp name="Argument.name">threadCount_accountSearch</stringProp>
-            <stringProp name="Argument.value">${__P(threadCount_accountSearch,100)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
           <elementProp name="throughput_accountSearch" elementType="Argument">
             <stringProp name="Argument.name">throughput_accountSearch</stringProp>
             <stringProp name="Argument.value">${__P(throughput_accountSearch,1456)}</stringProp>
@@ -121,11 +106,6 @@
           <elementProp name="threadCount_filters" elementType="Argument">
             <stringProp name="Argument.name">threadCount_filters</stringProp>
             <stringProp name="Argument.value">${__P(threadCount_filters,100)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="throughput_filters" elementType="Argument">
-            <stringProp name="Argument.name">throughput_filters</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_filters,42)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="saToken" elementType="Argument">
@@ -243,6 +223,11 @@
             <stringProp name="Argument.value">${__P(throughput_accountList_DSM,36)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="throughput_groupList_DLS_Login" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupList_DLS_Login</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupList_DLS_Login,36)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
           <elementProp name="throughput_accountList_MDRM" elementType="Argument">
             <stringProp name="Argument.name">throughput_accountList_MDRM</stringProp>
             <stringProp name="Argument.value">${__P(throughput_accountList_MDRM,26)}</stringProp>
@@ -256,6 +241,151 @@
           <elementProp name="throughput_accountList_SUPPORT" elementType="Argument">
             <stringProp name="Argument.name">throughput_accountList_SUPPORT</stringProp>
             <stringProp name="Argument.value">${__P(throughput_accountList_SUPPORT,5)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Single_SC_5" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Single_SC_5</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Single_SC_5,42)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Single_SC_10" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Single_SC_10</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Single_SC_10,21)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Single_SC_150" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Single_SC_150</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Single_SC_150,7)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Single_MDRM_5" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Single_MDRM_5</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Single_MDRM_5,9)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Single_MDRM_10" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Single_MDRM_10</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Single_MDRM_10,4)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Single_MDRM_150" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Single_MDRM_150</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Single_MDRM_150,2)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Single_SUPPORT_5" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Single_SUPPORT_5</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Single_SUPPORT_5,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Single_SUPPORT_10" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Single_SUPPORT_10</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Single_SUPPORT_10,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Single_SUPPORT_150" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Single_SUPPORT_150</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Single_SUPPORT_150,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Multi_SC_5" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Multi_SC_5</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Multi_SC_5,29)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Multi_SC_10" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Multi_SC_10</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Multi_SC_5,13)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Multi_SC_150" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Multi_SC_150</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Multi_SC_5,5)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Mutli_MDRM_5" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Mutli_MDRM_5</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Multi_MDRM_5,6)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Mutli_MDRM_10" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Mutli_MDRM_10</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Multi_MDRM_10,3)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Mutli_MDRM_15" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Mutli_MDRM_15</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Multi_MDRM_150,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Multi_SUPPORT_5" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Multi_SUPPORT_5</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Multi_SUPPORT_5,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Multi_SUPPORT_10" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Multi_SUPPORT_10</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Multi_SUPPORT_10,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_groupDetails_Multi_SUPPORT_150" elementType="Argument">
+            <stringProp name="Argument.name">throughput_groupDetails_Multi_SUPPORT_150</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_groupDetails_Multi_SUPPORT_150,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="threadCount_accountSearch_MDRM" elementType="Argument">
+            <stringProp name="Argument.name">threadCount_accountSearch_MDRM</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_accountSearch_MDRM,1164)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="threadCount_accountSearch_DLS" elementType="Argument">
+            <stringProp name="Argument.name">threadCount_accountSearch_DLS</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_accountSearch_DLS,41)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="threadCount_accountSearch_SUPPORT" elementType="Argument">
+            <stringProp name="Argument.name">threadCount_accountSearch_SUPPORT</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_accountSearch_SUPPORT,125)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="threadCount_accountSearch_SA" elementType="Argument">
+            <stringProp name="Argument.name">threadCount_accountSearch_SA</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_accountSearch_SA,63)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="threadCount_accountSearch_DSM" elementType="Argument">
+            <stringProp name="Argument.name">threadCount_accountSearch_DSM</stringProp>
+            <stringProp name="Argument.value">${__P(threadCount_accountSearch_DSM,63)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_filters_SA" elementType="Argument">
+            <stringProp name="Argument.name">throughput_filters_SA</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_filters_SA,2)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_filters_DSM" elementType="Argument">
+            <stringProp name="Argument.name">throughput_filters_DSM</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_filters_DSM,4)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_filters_SC" elementType="Argument">
+            <stringProp name="Argument.name">throughput_filters_SC</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_filters_SC,30)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_filters_DLS" elementType="Argument">
+            <stringProp name="Argument.name">throughput_filters_DLS</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_filters_DLS,2)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_filters_SUPPORT" elementType="Argument">
+            <stringProp name="Argument.name">throughput_filters_SUPPORT</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_filters_SUPPORT,1)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="throughput_filters_MDRM" elementType="Argument">
+            <stringProp name="Argument.name">throughput_filters_MDRM</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_filters_MDRM,3)</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -1714,7 +1844,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List GroupListSearchWithoutFiltersMDRM26%" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List GroupListSearchWithoutFiltersMDRM26%" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1293712487">
             <stringProp name="795640145">${threadCount_groupList}</stringProp>
@@ -1848,7 +1978,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List GroupListSearchWithFiltersMDRM38%" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List GroupListSearchWithFiltersMDRM38%" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1293712487">
             <stringProp name="795640145">${threadCount_groupList}</stringProp>
@@ -1996,7 +2126,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List GroupListDefaultLoginMDRM15%" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List GroupListDefaultLoginMDRM15%" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1293712487">
             <stringProp name="795640145">${threadCount_groupList}</stringProp>
@@ -2130,7 +2260,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List GroupListSearchWithoutFiltersDLS4%" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List GroupListSearchWithoutFiltersDLS4%" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1293712487">
             <stringProp name="795640145">${threadCount_groupList}</stringProp>
@@ -2264,7 +2394,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List GroupListSearchWithFiltersDLS10%" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List GroupListSearchWithFiltersDLS10%" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1293712487">
             <stringProp name="795640145">${threadCount_groupList}</stringProp>
@@ -2412,7 +2542,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List GroupListDefaultLoginDLS7%" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List GroupListDefaultLoginDLS7%" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1293712487">
             <stringProp name="795640145">${threadCount_groupList}</stringProp>
@@ -2546,7 +2676,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Account List AccountListMDRM20%" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Account List AccountListMDRM20%" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1265961814">
             <stringProp name="1346998819">${threadCount_accountList}</stringProp>
@@ -2659,7 +2789,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Account List AccountListSA28%" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Account List AccountListSA28%" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1265961814">
             <stringProp name="1346998819">${threadCount_accountList}</stringProp>
@@ -2772,7 +2902,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Account List AccountListSC20%" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Account List AccountListSC20%" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1265961814">
             <stringProp name="1346998819">${threadCount_accountList}</stringProp>
@@ -2885,7 +3015,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Account List AccountListDSM28%" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Account List AccountListDSM28%" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1265961814">
             <stringProp name="1346998819">${threadCount_accountList}</stringProp>
@@ -2998,7 +3128,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Account List AccountListSupport4%" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Account List AccountListSupport4%" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1265961814">
             <stringProp name="1346998819">${threadCount_accountList}</stringProp>
@@ -3111,7 +3241,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single - Site - Group - Detail" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single - Site - Group - Detail GroupDetailWith5AccInGroupSC48%" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="-509379132">
             <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
@@ -3129,7 +3259,7 @@
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
         <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
-          <stringProp name="throughput">${throughput_groupDetails}</stringProp>
+          <stringProp name="throughput">${throughput_groupDetails_Single_SC_5}</stringProp>
           <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
           <stringProp name="duration">${test_duration}</stringProp>
           <intProp name="batchSize">1</intProp>
@@ -3143,16 +3273,10 @@
           <longProp name="randomSeed">0</longProp>
         </PreciseThroughputTimer>
         <hashTree/>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith5AccInGroupSC48%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>48.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith5AccInGroupSC48%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -3207,16 +3331,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith10AccInGroupSC24%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>24.0</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single - Site - Group - Detail GroupDetailWith10AccInGroupSC24%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Single_SC_10}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith10AccInGroupSC24%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -3271,16 +3422,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith150AccInGroupSC8%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>8.0</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single - Site - Group - Detail GroupDetailWith150AccInGroupSC8%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Single_SC_150}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith150AccInGroupSC8%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -3335,16 +3513,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith5AccInGroupMDRM10.8%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>10.8</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single - Site - Group - Detail GroupDetailWith5AccInGroupMDRM10.8%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Single_MDRM_5}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith5AccInGroupMDRM10.8%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -3399,16 +3604,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith10AccInGroupMDRM5.4%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>5.4</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single - Site - Group - Detail GroupDetailWith10AccInGroupMDRM5.4%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Single_MDRM_10}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith10AccInGroupMDRM5.4%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -3463,12 +3695,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith150AccInGroupMDRM1.8%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <stringProp name="ThroughputController.percentThroughput">1.8.0</stringProp>
-        </ThroughputController>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single - Site - Group - Detail GroupDetailWith150AccInGroupMDRM1.8%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Single_MDRM_150}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith150AccInGroupMDRM1.8%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -3523,16 +3786,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith5AccInGroupSupport1.2%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>1.2</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single - Site - Group - Detail GroupDetailWith5AccInGroupSupport1.2%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Single_SUPPORT_5}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith5AccInGroupSupport1.2%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -3587,16 +3877,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith10AccInGroupSupport0.6%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>0.6</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single - Site - Group - Detail GroupDetailWith10AccInGroupSupport0.6%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Single_SUPPORT_10}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith10AccInGroupSupport0.6%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -3651,16 +3968,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith150AccInGroupSupport0.2%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>0.2</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single - Site - Group - Detail GroupDetailWith150AccInGroupSupport0.2%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Single_SUPPORT_150}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith150AccInGroupSupport0.2%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -3716,7 +4060,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi - Site - Group - Detail" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi - Site - Group - Detail GroupDetailWith5AccInGroupSC48%" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="-509379132">
             <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
@@ -3734,7 +4078,7 @@
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
         <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
-          <stringProp name="throughput">${throughput_multi_site__groupDetails}</stringProp>
+          <stringProp name="throughput">${throughput_groupDetails_Multi_SC_5}</stringProp>
           <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
           <stringProp name="duration">${test_duration}</stringProp>
           <intProp name="batchSize">1</intProp>
@@ -3748,16 +4092,10 @@
           <longProp name="randomSeed">0</longProp>
         </PreciseThroughputTimer>
         <hashTree/>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith5AccInGroupSC48%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>48.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith5AccInGroupSC48%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -3812,16 +4150,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith10AccInGroupSC24%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>24.0</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi - Site - Group - Detail GroupDetailWith10AccInGroupSC24%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Multi_SC_10}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith10AccInGroupSC24%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -3876,16 +4241,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith150AccInGroupSC8%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>8.0</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi - Site - Group - Detail GroupDetailWith150AccInGroupSC8%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Multi_SC_150}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith150AccInGroupSC8%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -3940,16 +4332,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith5AccInGroupMDRM10.8%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>10.8</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi - Site - Group - Detail GroupDetailWith5AccInGroupMDRM10.8%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Mutli_MDRM_5}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith5AccInGroupMDRM10.8%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -4004,16 +4423,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith10AccInGroupMDRM5.4%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>5.4</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi - Site - Group - Detail GroupDetailWith10AccInGroupMDRM5.4%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Mutli_MDRM_10}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith10AccInGroupMDRM5.4%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -4068,12 +4514,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith150AccInGroupMDRM1.8%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <stringProp name="ThroughputController.percentThroughput">1.8.0</stringProp>
-        </ThroughputController>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi - Site - Group - Detail GroupDetailWith150AccInGroupMDRM1.8%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Mutli_MDRM_150}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith150AccInGroupMDRM1.8%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -4128,16 +4605,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith5AccInGroupSupport1.2%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>1.2</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi - Site - Group - Detail GroupDetailWith5AccInGroupSupport1.2%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Multi_SUPPORT_5}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith5AccInGroupSupport1.2%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -4192,16 +4696,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith10AccInGroupSupport0.6%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>0.6</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi - Site - Group - Detail GroupDetailWith10AccInGroupSupport0.6%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Multi_SUPPORT_10}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith10AccInGroupSupport0.6%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -4256,16 +4787,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupDetailWith150AccInGroupSupport0.2%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>0.2</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi - Site - Group - Detail GroupDetailWith150AccInGroupSupport0.2%" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-509379132">
+            <stringProp name="-1310981239">${threadCount_groupDetails}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_groupDetails_Multi_SUPPORT_150}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupDetailWith150AccInGroupSupport0.2%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GroupDetail" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -4321,7 +4879,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Customer Search" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Customer Search AccountSearchMDRM80%" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1476917641">
             <stringProp name="-827921063">${threadCount_accountSearch}</stringProp>
@@ -4339,7 +4897,7 @@
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
         <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
-          <stringProp name="throughput">${throughput_accountSearch}</stringProp>
+          <stringProp name="throughput">${threadCount_accountSearch_MDRM}</stringProp>
           <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
           <stringProp name="duration">${test_duration}</stringProp>
           <intProp name="batchSize">1</intProp>
@@ -4353,16 +4911,10 @@
           <longProp name="randomSeed">0</longProp>
         </PreciseThroughputTimer>
         <hashTree/>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="AccountSearchMDRM80%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>80.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AccountSearchMDRM80%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AccountSearch" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -4446,202 +4998,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="AccountSearchSUPPORT9%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>9.0</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Customer Search AccountSearchSUPPORT9%" enabled="true">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="1476917641">
+            <stringProp name="-827921063">${threadCount_accountSearch}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${threadCount_accountSearch_SUPPORT}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
-        <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AccountSearch" enabled="true">
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="sites" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${site}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">sites</stringProp>
-                </elementProp>
-                <elementProp name="accountType" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${accountType}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">accountType</stringProp>
-                </elementProp>
-                <elementProp name="query" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${query}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">query</stringProp>
-                </elementProp>
-                <elementProp name="pageSize" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${pageSize}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">pageSize</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">pgt/v1/accounts/search</stringProp>
-            <stringProp name="HTTPSampler.method">GET</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">pgt-oidc-data</stringProp>
-                  <stringProp name="Header.value">${supportToken}</stringProp>
-                </elementProp>
-              </collectionProp>
-              <stringProp name="TestPlan.comments">SUPPORT user token</stringProp>
-            </HeaderManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="3076010">data</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message"></stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">2</intProp>
-            </ResponseAssertion>
-            <hashTree/>
-            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/customerSearchData_SupportUser.csv</stringProp>
-              <stringProp name="fileEncoding">UTF-8</stringProp>
-              <stringProp name="variableNames">site,accountType,query,pageSize</stringProp>
-              <boolProp name="ignoreFirstLine">false</boolProp>
-              <stringProp name="delimiter">\t</stringProp>
-              <boolProp name="quotedData">false</boolProp>
-              <boolProp name="recycle">true</boolProp>
-              <boolProp name="stopThread">false</boolProp>
-              <stringProp name="shareMode">shareMode.all</stringProp>
-            </CSVDataSet>
-            <hashTree/>
-          </hashTree>
-        </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="AccountSearchSA4%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>4.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
-        <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AccountSearch" enabled="true">
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="sites" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${site}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">sites</stringProp>
-                </elementProp>
-                <elementProp name="accountType" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${accountType}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">accountType</stringProp>
-                </elementProp>
-                <elementProp name="query" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${query}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">query</stringProp>
-                </elementProp>
-                <elementProp name="pageSize" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${pageSize}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">pageSize</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">pgt/v1/accounts/search</stringProp>
-            <stringProp name="HTTPSampler.method">GET</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">pgt-oidc-data</stringProp>
-                  <stringProp name="Header.value">${saToken}</stringProp>
-                </elementProp>
-              </collectionProp>
-              <stringProp name="TestPlan.comments">SA user token</stringProp>
-            </HeaderManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="3076010">data</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message"></stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">2</intProp>
-            </ResponseAssertion>
-            <hashTree/>
-            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/customerSearchData_SAUser.csv</stringProp>
-              <stringProp name="fileEncoding">UTF-8</stringProp>
-              <stringProp name="variableNames">site,accountType,query,pageSize</stringProp>
-              <boolProp name="ignoreFirstLine">false</boolProp>
-              <stringProp name="delimiter">\t</stringProp>
-              <boolProp name="quotedData">false</boolProp>
-              <boolProp name="recycle">true</boolProp>
-              <boolProp name="stopThread">false</boolProp>
-              <stringProp name="shareMode">shareMode.all</stringProp>
-            </CSVDataSet>
-            <hashTree/>
-          </hashTree>
-        </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="AccountSearchDSM4%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>4.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AccountSearchSUPPORT9%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AccountSearch" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -4725,16 +5118,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="AccountSearchDLS3%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>3.0</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Customer Search AccountSearchDLS3%" enabled="true">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="1476917641">
+            <stringProp name="-827921063">${threadCount_accountSearch}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${threadCount_accountSearch_DLS}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AccountSearchDLS3%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AccountSearch" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -4819,7 +5239,247 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Filters" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Customer Search AccountSearchSA4%" enabled="true">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="1476917641">
+            <stringProp name="-827921063">${threadCount_accountSearch}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${threadCount_accountSearch_SA}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AccountSearchSA4%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AccountSearch" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="sites" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${site}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">sites</stringProp>
+                </elementProp>
+                <elementProp name="accountType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${accountType}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">accountType</stringProp>
+                </elementProp>
+                <elementProp name="query" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${query}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">query</stringProp>
+                </elementProp>
+                <elementProp name="pageSize" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${pageSize}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pageSize</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">pgt/v1/accounts/search</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">pgt-oidc-data</stringProp>
+                  <stringProp name="Header.value">${saToken}</stringProp>
+                </elementProp>
+              </collectionProp>
+              <stringProp name="TestPlan.comments">SA user token</stringProp>
+            </HeaderManager>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="3076010">data</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+              <stringProp name="filename">/opt/perf-test-data/customerSearchData_SAUser.csv</stringProp>
+              <stringProp name="fileEncoding">UTF-8</stringProp>
+              <stringProp name="variableNames">site,accountType,query,pageSize</stringProp>
+              <boolProp name="ignoreFirstLine">false</boolProp>
+              <stringProp name="delimiter">\t</stringProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Customer Search AccountSearchDSM4%" enabled="true">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="1476917641">
+            <stringProp name="-827921063">${threadCount_accountSearch}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${threadCount_accountSearch_DSM}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="AccountSearchDSM4%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AccountSearch" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="sites" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${site}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">sites</stringProp>
+                </elementProp>
+                <elementProp name="accountType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${accountType}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">accountType</stringProp>
+                </elementProp>
+                <elementProp name="query" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${query}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">query</stringProp>
+                </elementProp>
+                <elementProp name="pageSize" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${pageSize}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pageSize</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">pgt/v1/accounts/search</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">pgt-oidc-data</stringProp>
+                  <stringProp name="Header.value">${dsmToken}</stringProp>
+                </elementProp>
+              </collectionProp>
+              <stringProp name="TestPlan.comments"> DSM user token</stringProp>
+            </HeaderManager>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="3076010">data</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+              <stringProp name="filename">/opt/perf-test-data/customerSearchData_DSMUser.csv</stringProp>
+              <stringProp name="fileEncoding">UTF-8</stringProp>
+              <stringProp name="variableNames">site,accountType,query,pageSize</stringProp>
+              <boolProp name="ignoreFirstLine">false</boolProp>
+              <stringProp name="delimiter">\t</stringProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">true</boolProp>
+              <boolProp name="stopThread">false</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Filters FilterMDRM6%" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="866094573">
             <stringProp name="-87019245">${threadCount_filters}</stringProp>
@@ -4837,7 +5497,7 @@
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
         <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
-          <stringProp name="throughput">${throughput_filters}</stringProp>
+          <stringProp name="throughput">${throughput_filters_MDRM}</stringProp>
           <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
           <stringProp name="duration">${test_duration}</stringProp>
           <intProp name="batchSize">1</intProp>
@@ -4851,16 +5511,10 @@
           <longProp name="randomSeed">0</longProp>
         </PreciseThroughputTimer>
         <hashTree/>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="FilterMDRM6%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>6.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="FilterMDRM6%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -4903,16 +5557,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="FilterSA6%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>6.0</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Filters FilterSA6%" enabled="true">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="866094573">
+            <stringProp name="-87019245">${threadCount_filters}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_filters_SA}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="FilterSA6%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -4955,120 +5636,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="FilterDSM10%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>10.0</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Filters FilterDLS6%" enabled="true">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="866094573">
+            <stringProp name="-87019245">${threadCount_filters}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_filters_DLS}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
-        <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments"/>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">pgt/v1/filters</stringProp>
-            <stringProp name="HTTPSampler.method">GET</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">pgt-oidc-data</stringProp>
-                  <stringProp name="Header.value">${dsmToken}</stringProp>
-                </elementProp>
-              </collectionProp>
-              <stringProp name="TestPlan.comments">DSM user token</stringProp>
-            </HeaderManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="839250871">markets</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message"></stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">2</intProp>
-            </ResponseAssertion>
-            <hashTree/>
-          </hashTree>
-        </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="FilterSC70%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>70.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
-        <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments"/>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">pgt/v1/filters</stringProp>
-            <stringProp name="HTTPSampler.method">GET</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">pgt-oidc-data</stringProp>
-                  <stringProp name="Header.value">${scToken}</stringProp>
-                </elementProp>
-              </collectionProp>
-              <stringProp name="TestPlan.comments">SC user token</stringProp>
-            </HeaderManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="839250871">markets</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message"></stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">2</intProp>
-            </ResponseAssertion>
-            <hashTree/>
-          </hashTree>
-        </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="FilterDLS6%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>6.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="FilterDLS6%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -5111,16 +5715,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="FilterSupport2%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>2.0</value>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Filters FilterSupport2%" enabled="true">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="866094573">
+            <stringProp name="-87019245">${threadCount_filters}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_filters_SUPPORT}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
             <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="FilterSupport2%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -5149,6 +5780,164 @@
                 </elementProp>
               </collectionProp>
               <stringProp name="TestPlan.comments">Support user token</stringProp>
+            </HeaderManager>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="839250871">markets</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Filters FilterDSM10%" enabled="true">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="866094573">
+            <stringProp name="-87019245">${threadCount_filters}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_filters_DSM}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="FilterDSM10%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">pgt/v1/filters</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">pgt-oidc-data</stringProp>
+                  <stringProp name="Header.value">${dsmToken}</stringProp>
+                </elementProp>
+              </collectionProp>
+              <stringProp name="TestPlan.comments">DSM user token</stringProp>
+            </HeaderManager>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="839250871">markets</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Filters FilterSC70%" enabled="true">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="866094573">
+            <stringProp name="-87019245">${threadCount_filters}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_filters_SC}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="FilterSC70%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="filter" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">pgt/v1/filters</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">pgt-oidc-data</stringProp>
+                  <stringProp name="Header.value">${scToken}</stringProp>
+                </elementProp>
+              </collectionProp>
+              <stringProp name="TestPlan.comments">SC user token</stringProp>
             </HeaderManager>
             <hashTree/>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
