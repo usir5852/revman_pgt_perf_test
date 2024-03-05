@@ -1,0 +1,7 @@
+groupId	groupName	notes	sites	leadSite	addedAccounts	removedAccounts	leadAccount
+37913	Perf test multi site don't delete	test note 0	[64, 66]	64	[54072, 54084]	[]	60320
+37914	Perf test multi site don't delete	test note 0	[64, 66]	64	[54087, 54089]	[]	45578
+37931	Perf test multi site grp 29	test note 0	[64, 66]	66	[54098, 43837]	[]	775527
+37946	Perf test multi site grp 30	test note 0	[64, 66]	66	[60424, 711161]	[]	775504
+37955	Perf test multi site grp 31	test note 0	[64, 66]	66	[711167, 711173]	[]	767214
+37965	Perf test multi site grp 32	test note 0	[64, 66]	66	[54109, 55516]	[]	774757

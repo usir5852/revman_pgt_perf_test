@@ -1,20 +1,5 @@
-﻿26404	Perf test grp 1	test note 0	[]	[116246]	116233
-26628	Perf test grp 2	test note 0	[]	[140939]	140886
-26406	Perf test grp 3	test note 0	[109877, 109891]	[]	158677
-26407	Perf test grp 4	test note 0	[109899, 110035]	[]	159110
-26408	Perf test grp 5	test note 0	[110062, 110082]	[]	1128915
-26409	Perf test grp 6	test note 0	[110102, 110943]	[]	159796
-26410	Perf test grp 7	test note 0	[110973, 110975]	[]	159876
-26411	Perf test grp 8	test note 0	[110977, 110991]	[]	159933
-26412	Perf test grp 9	test note 0	[111280, 111291]	[]	107120770
-26413	Perf test grp 10	test note 0	[111598, 111600]	[]	93337527
-26414	Perf test grp 11	test note 0	[111604, 111669]	[]	109830254
-26415	Perf test grp 12	test note 0	[112037, 112043]	[]	135520
-26416	Perf test grp 13	test note 0	[112988, 113004]	[]	161176
-26417	Perf test grp 14	test note 0	[113008, 113009]	[]	139693
-26418	Perf test grp 15	test note 0	[113010, 113030]	[]	141177
-26419	Perf test grp 16	test note 0	[113034, 113036]	[]	114349
-26420	Perf test grp 17	test note 0	[113715, 113717]	[]	114274
-26421	Perf test grp 18	test note 0	[113720, 113721]	[]	114398
-26422	Perf test grp 19	test note 0	[113722, 113864]	[]	114483
-26628	Perf test grp 2	test note test	[]	[]	140886
+groupId	groupName	notes	sites	leadSite	addedAccounts	removedAccounts	leadAccount
+37935	Perf test grp 1	test note 0	[67]	67	[]	[167404]	167402
+37944	Perf test grp 3	test note 0	[67]	67	[110659, 113082]	[]	155564
+37945	Perf test grp 4	test note 0	[67]	67	[113102, 113596]	[]	155745
+37954	Perf test grp 5	test note 0	[67]	67	[113614, 113620]	[]	155900
