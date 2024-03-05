@@ -331,7 +331,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Create Single Site group MDRM" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Create Single Site group MDRM" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="440145499">
             <stringProp name="1463750315">${threadCount_createGroup}</stringProp>
@@ -445,7 +445,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Create Single Site group DLS" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Create Single Site group DLS" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="440145499">
             <stringProp name="1463750315">${threadCount_createGroup}</stringProp>
@@ -559,7 +559,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Create Multi Site group MDRM" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Create Multi Site group MDRM" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="440145499">
             <stringProp name="1463750315">${threadCount_createGroup}</stringProp>
@@ -673,7 +673,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Create Multi Site group SUPPORT" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Create Multi Site group SUPPORT" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="440145499">
             <stringProp name="1463750315">${threadCount_createGroup}</stringProp>
@@ -1245,7 +1245,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single Site - Expire" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single Site - Expire MDRM" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1503443493">
             <stringProp name="898073742">${threadCount_expireGroup}</stringProp>
@@ -1277,16 +1277,10 @@
           <longProp name="randomSeed">0</longProp>
         </PreciseThroughputTimer>
         <hashTree/>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupExpierMDRM80%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>80.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupExpierMDRM80%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="expierGroup" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -1356,16 +1350,43 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupExpierDLS20%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>20.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Single Site - Expire DLS" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="1503443493">
+            <stringProp name="898073742">${threadCount_expireGroup}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_expireGroup}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
+            <savedValue>1.0</savedValue>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupExpierDLS20%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="expierGroup" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -1436,7 +1457,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi Site - Expire" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi Site - Expire SUPPORT" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1503443493">
             <stringProp name="898073742">${threadCount_expireGroup}</stringProp>
@@ -1468,95 +1489,10 @@
           <longProp name="randomSeed">0</longProp>
         </PreciseThroughputTimer>
         <hashTree/>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupExpierMDRM80%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>80.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
-        <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="expierGroup" enabled="true">
-            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;groupList&quot;:${groupId_MDRM}}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">pgt/v1/groups</stringProp>
-            <stringProp name="HTTPSampler.method">DELETE</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">pgt-oidc-data</stringProp>
-                  <stringProp name="Header.value">${mdrmToken}</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">Accept</stringProp>
-                  <stringProp name="Header.value">application/json</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">Content-Type</stringProp>
-                  <stringProp name="Header.value">application/json</stringProp>
-                </elementProp>
-              </collectionProp>
-              <stringProp name="TestPlan.comments">MMRM/MDRM user token</stringProp>
-            </HeaderManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="49586">200</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message"></stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_headers</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">2</intProp>
-            </ResponseAssertion>
-            <hashTree/>
-            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">/opt/perf-test-data/groupDataForExpier_MultiSIte_MDRMUser.csv</stringProp>
-              <stringProp name="fileEncoding">UTF-8</stringProp>
-              <stringProp name="variableNames">groupId_MDRM</stringProp>
-              <boolProp name="ignoreFirstLine">false</boolProp>
-              <stringProp name="delimiter">\t</stringProp>
-              <boolProp name="quotedData">false</boolProp>
-              <boolProp name="recycle">false</boolProp>
-              <boolProp name="stopThread">true</boolProp>
-              <stringProp name="shareMode">shareMode.all</stringProp>
-            </CSVDataSet>
-            <hashTree/>
-          </hashTree>
-        </hashTree>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="GroupExpierSUPPORT20%" enabled="true">
-          <intProp name="ThroughputController.style">1</intProp>
-          <boolProp name="ThroughputController.perThread">true</boolProp>
-          <intProp name="ThroughputController.maxThroughput">1</intProp>
-          <FloatProperty>
-            <name>ThroughputController.percentThroughput</name>
-            <value>20.0</value>
-            <savedValue>0.0</savedValue>
-          </FloatProperty>
-        </ThroughputController>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupExpierSUPPORT20%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="expierGroup" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -1627,7 +1563,113 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Multi Site - Expire MDRM" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="1503443493">
+            <stringProp name="898073742">${threadCount_expireGroup}</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="1989496920">${rampUpPeriod}</stringProp>
+            <stringProp name="-1613245155">${target_tp_duration}</stringProp>
+            <stringProp name="2133191345">${rampDownPeriod}</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <PreciseThroughputTimer guiclass="TestBeanGUI" testclass="PreciseThroughputTimer" testname="Precise Throughput Timer" enabled="true">
+          <stringProp name="throughput">${throughput_multi_site_expireGroup}</stringProp>
+          <stringProp name="throughputPeriod">${target_tp_duration}</stringProp>
+          <stringProp name="duration">${test_duration}</stringProp>
+          <intProp name="batchSize">1</intProp>
+          <intProp name="batchThreadDelay">0</intProp>
+          <intProp name="exactLimit">10000</intProp>
+          <doubleProp>
+            <name>allowedThroughputSurplus</name>
+            <value>1.0</value>
+            <savedValue>1.0</savedValue>
+          </doubleProp>
+          <longProp name="randomSeed">0</longProp>
+        </PreciseThroughputTimer>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="GroupExpierMDRM80%" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="expierGroup" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;groupList&quot;:${groupId_MDRM}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">pgt/v1/groups</stringProp>
+            <stringProp name="HTTPSampler.method">DELETE</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">pgt-oidc-data</stringProp>
+                  <stringProp name="Header.value">${mdrmToken}</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+              </collectionProp>
+              <stringProp name="TestPlan.comments">MMRM/MDRM user token</stringProp>
+            </HeaderManager>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_headers</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+              <stringProp name="filename">/opt/perf-test-data/groupDataForExpier_MultiSIte_MDRMUser.csv</stringProp>
+              <stringProp name="fileEncoding">UTF-8</stringProp>
+              <stringProp name="variableNames">groupId_MDRM</stringProp>
+              <boolProp name="ignoreFirstLine">false</boolProp>
+              <stringProp name="delimiter">\t</stringProp>
+              <boolProp name="quotedData">false</boolProp>
+              <boolProp name="recycle">false</boolProp>
+              <boolProp name="stopThread">true</boolProp>
+              <stringProp name="shareMode">shareMode.all</stringProp>
+            </CSVDataSet>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Group List" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1293712487">
             <stringProp name="795640145">${threadCount_groupList}</stringProp>
@@ -2330,7 +2372,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Account List" enabled="false">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Account List" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1265961814">
             <stringProp name="1346998819">${threadCount_accountList}</stringProp>
@@ -4956,39 +4998,49 @@
       <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
         <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
           <collectionProp name="Arguments.arguments">
-            <elementProp name="graphiteMetricsSender" elementType="Argument">
-              <stringProp name="Argument.name">graphiteMetricsSender</stringProp>
-              <stringProp name="Argument.value">org.apache.jmeter.visualizers.backend.graphite.TextGraphiteMetricsSender</stringProp>
+            <elementProp name="influxdbMetricsSender" elementType="Argument">
+              <stringProp name="Argument.name">influxdbMetricsSender</stringProp>
+              <stringProp name="Argument.value">org.apache.jmeter.visualizers.backend.influxdb.HttpMetricsSender</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="graphiteHost" elementType="Argument">
-              <stringProp name="Argument.name">graphiteHost</stringProp>
-              <stringProp name="Argument.value"></stringProp>
+            <elementProp name="influxdbUrl" elementType="Argument">
+              <stringProp name="Argument.name">influxdbUrl</stringProp>
+              <stringProp name="Argument.value">http://host_to_change:8086/write?db=jmeter</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="graphitePort" elementType="Argument">
-              <stringProp name="Argument.name">graphitePort</stringProp>
-              <stringProp name="Argument.value">2003</stringProp>
+            <elementProp name="application" elementType="Argument">
+              <stringProp name="Argument.name">application</stringProp>
+              <stringProp name="Argument.value">application name</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="rootMetricsPrefix" elementType="Argument">
-              <stringProp name="Argument.name">rootMetricsPrefix</stringProp>
-              <stringProp name="Argument.value">jmeter.</stringProp>
+            <elementProp name="measurement" elementType="Argument">
+              <stringProp name="Argument.name">measurement</stringProp>
+              <stringProp name="Argument.value">jmeter</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="summaryOnly" elementType="Argument">
               <stringProp name="Argument.name">summaryOnly</stringProp>
-              <stringProp name="Argument.value">true</stringProp>
+              <stringProp name="Argument.value">false</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="samplersList" elementType="Argument">
-              <stringProp name="Argument.name">samplersList</stringProp>
+            <elementProp name="samplersRegex" elementType="Argument">
+              <stringProp name="Argument.name">samplersRegex</stringProp>
               <stringProp name="Argument.value">.*</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="percentiles" elementType="Argument">
               <stringProp name="Argument.name">percentiles</stringProp>
-              <stringProp name="Argument.value">90;95;99</stringProp>
+              <stringProp name="Argument.value">99;95;90</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="testTitle" elementType="Argument">
+              <stringProp name="Argument.name">testTitle</stringProp>
+              <stringProp name="Argument.value">Test name</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="eventTags" elementType="Argument">
+              <stringProp name="Argument.name">eventTags</stringProp>
+              <stringProp name="Argument.value"></stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="nodeName" elementType="Argument">
@@ -5023,7 +5075,7 @@
             </elementProp>
             <elementProp name="influxDBToken" elementType="Argument">
               <stringProp name="Argument.name">influxDBToken</stringProp>
-              <stringProp name="Argument.value">9eanu4pcTwhfcQ9CyMAFoeAoXlYv08Efs4iFnGEneGaKXNO9AgSMQnrXnQfZNi8LoO86HV6PpOVB2kcSU3h8Lw==</stringProp>
+              <stringProp name="Argument.value">vcgrjECCMCjncIPpUThU6ohRoN_2wLo_ynZwGBILfG7QbdE3NoQaYQqzTHk6LkFVEqZ2CTsL8ik2t9R-9bYTOw==</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="influxDBThresholdError" elementType="Argument">
@@ -5058,12 +5110,12 @@
             </elementProp>
             <elementProp name="testName" elementType="Argument">
               <stringProp name="Argument.name">testName</stringProp>
-              <stringProp name="Argument.value">PGT_APIPerf</stringProp>
+              <stringProp name="Argument.value">PGT-API</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
         </elementProp>
-        <stringProp name="classname">org.apache.jmeter.visualizers.backend.graphite.GraphiteBackendListenerClient</stringProp>
+        <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
       </BackendListener>
       <hashTree/>
       <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
