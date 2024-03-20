@@ -25,12 +25,12 @@
           </elementProp>
           <elementProp name="test_duration" elementType="Argument">
             <stringProp name="Argument.name">test_duration</stringProp>
-            <stringProp name="Argument.value">${__P(test_duration,600)}</stringProp>
+            <stringProp name="Argument.value">${__P(test_duration,3600)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="target_tp_duration" elementType="Argument">
             <stringProp name="Argument.name">target_tp_duration</stringProp>
-            <stringProp name="Argument.value">${__P(target_tp_duration,600)}</stringProp>
+            <stringProp name="Argument.value">${__P(target_tp_duration,3600)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="rampDownPeriod" elementType="Argument">
@@ -335,7 +335,7 @@
           </elementProp>
           <elementProp name="throughput_accountSearch_MDRM" elementType="Argument">
             <stringProp name="Argument.name">throughput_accountSearch_MDRM</stringProp>
-            <stringProp name="Argument.value">${__P(throughput_accountSearch_MDRM,10)}</stringProp>
+            <stringProp name="Argument.value">${__P(throughput_accountSearch_MDRM,1164)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="throughput_accountSearch_DLS" elementType="Argument">
@@ -4879,7 +4879,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Customer Search" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group - Customer Search" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="1476917641">
             <stringProp name="-827921063">${threadCount_accountSearch}</stringProp>
